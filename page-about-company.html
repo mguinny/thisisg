@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--  -->
+        <!--    Document Title-->
+        <!-- =============================================-->
+        <title>G | Full Suite Technology Company. Blockchain, Mobile and Web Development Solutions</title>
+        <!--  -->
+        <!--    Favicons-->
+        <!--    =============================================-->
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!--  -->
+        <!--    Stylesheets-->
+        <!--    =============================================-->
+        <!-- Default stylesheets-->
+        <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Template specific stylesheets-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i" rel="stylesheet">
+        <link href="assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/lib/iconsmind/iconsmind.css" rel="stylesheet">
+        <link href="assets/lib/css-hamburgers/dist/hamburgers.css" rel="stylesheet">
+        <link href="assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+        <link href="assets/lib/remodal/dist/remodal.css" rel="stylesheet">
+        <link href="assets/lib/remodal/dist/remodal-default-theme.css" rel="stylesheet">
+        <link href="assets/lib/prism/prism.css" rel="stylesheet">
+        <link href="assets/lib/semantic-ui-accordion/accordion.css" rel="stylesheet">
+        <link href="assets/lib/semantic-ui-transition/transition.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="animate.min.css">
+
+
+
+        <!-- Main stylesheet and color file-->
+        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/custom.css" rel="stylesheet"> 
+
+        <link rel="shortcut icon" href="7.ico" type="image/x-icon">
+        
+        <meta name="description" content="This is G - A Full Suite Technology Company. Blockchain, Mobile and Web Technology, Cloud Computing, Digital Marketing, Branding and Content Creation. "/>
+
+        <meta name="keywords" content="Full Stack, Full Suite, G Suite, Blockchain, Blockchain Solutions, Mobile Applications, Mobile App, Mobile Solutions, Techology, Technology Company, Technology Solutions". /-->
+
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107350529-1"></script>
+        
+        <script>
+                 window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments)};
+                gtag('js', new Date());
+
+                gtag('config', 'UA-107350529-1');
+        </script>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/TimeCircles.js"></script>
+        <link href="assets/css/TimeCircles.css" rel="stylesheet">   
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+        
+
+        <script type="text/javascript" >
+
+        $(document).ready(function(){
+
+            $(".example").TimeCircles({circle_bg_color: "#000000",time: {
+    Days: { color: "#FFD700" },
+    Hours: { color: "#FFD700" },
+    Minutes: { color: "#FFD700" },
+    Seconds: { color: "#FFD700" }
+    },animation: "smooth"}); 
+        })
+
+            var messagesRef = new Firebase('https://ic3cubes-db.firebaseio.com/');
+
+                   function postinquiry(e) {
+                     e.preventDefault();
+                   console.log('sadfasdfvalue');
+                    console.log(document.getElementById("name").value);
+        
+                    if(document.getElementById("name").value !== "" &&  document.getElementById("email").value !== "" &&  document.getElementById("message").value !== ""){
+                        var data ={
+                        name: document.getElementById("name").value,
+                        email: document.getElementById("email").value,
+                        message: document.getElementById("message").value,
+                        }
+                        messagesRef.push(data, function(error) {
+                         if (error){
+                            document.getElementById("message13").style.display = "block";
+                            console.log('Error has occured during saving process');
+                            document.getElementById("name").value='';
+                            document.getElementById("email").value='';
+                            document.getElementById("message").value='';
+
+                        /// $('#ErrormyModal').modal('show');
+                         }else{
+
+                        //  $(document).ready(function() {
+                        //        $("#myModal").modal('show');
+                        //  });
+                        //  $('#myModal').modal('show');
+                        document.getElementById("message12").style.display = "block";
+                        
+                            document.getElementById("name").value='';
+                            document.getElementById("email").value='';
+                            document.getElementById("message").value='';
+                            console.log("Data hss been saved succesfully");
+                         }
+                         
+                    })
+                    } else{
+                        document.getElementById("message14").style.display = "block";
+                            console.log('Validation Error');
+                        //$('#ValidationModal').modal('show');
+                    }
+        
+                    }
+                    function resetForm(){
+                        document.getElementById("message14").style.display = "none";
+                        document.getElementById("message13").style.display = "none";
+                        document.getElementById("message12").style.display = "none";
+
+                    }
+
+        </script>
+
+
+    </head>
+    
+
+    <body data-spy="scroll" data-target=".inner-link" data-offset="60">
+        <main>
+            <div class="znav-container znav-white znav-fixed border-bottom-nav color-10" id="znav-container">
+                <div class="container">
+                    <nav class="navbar navbar-toggleable-md">
+                        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <div class="hamburger hamburger--emphatic">
+                                <div class="hamburger-box">
+                                    <div class="hamburger-inner"></div>
+                                </div>
+                            </div>
+                        </button>
+                        <a class="navbar-brand overflow-hidden" href="index.html">
+                            <img src='assets/images/logo.png' alt='logo' width='60px'>
+                        </a>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            
+
+                            <ul class="navbar-nav ml-auto">
+
+
+                            <li>
+                                <a href="JavaScript:void(0)">ABOUT</a>
+                                <ul class="dropdown dropdown-push-left">
+                                                <li>
+                                                    <a href="page-about-company.html">Company</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="page-about-team.html">Team</a>
+                                                </li>
+                                                
+                                                <li>
+                                                    <a href="page-careers.html">Careers</a>
+                                                </li>
+                                                  
+                                     </ul>
+                            </li>    
+
+
+                            <li>
+                                <a href="JavaScript:void(0)">TECHNOLOGY</a>
+                                <ul class="dropdown dropdown-push-left">    
+
+
+                                                <li>
+                                                    <a href="home-digital-agency.html">Blockchain</a>
+                                                </li>   
+
+
+                                                <li>
+                                                    <a href="home-landing-nokia.html">Mobile</a>
+                                                </li> 
+
+
+                                                <li>
+                                                    <a href="home-landing-software.html">Web</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="page-services-1.html">Custom Software</a>
+                                                </li>
+
+                                      </ul>
+                            </li>
+
+                            <li>
+                                <a href="JavaScript:void(0)">EXPERTISE</a>
+                                <ul class="dropdown dropdown-push-left">    
+                                                <li>
+                                                    <a href="page-about-company.html">Blockchain</a>
+                                                </li>   
+
+
+                                                <li>
+                                                    <a href="page-about-company.html">Mobile</a>
+                                                </li> 
+
+
+                                                <li>
+                                                    <a href="page-about-company.html">Web</a>
+                                                </li>
+                                      </ul>
+                            </li>   
+
+
+                                 
+
+
+                            <li>
+                                    <a href="page-log-in.html">LOGIN</a>
+                            </li>
+
+
+                               <a class="btn btn-outline-black btn-xs text-uppercase ls ml-3" href="https://docs.google.com/forms/d/e/1FAIpQLSdKapEbHiPcEfMa4lKr9gxjj-vEjSVRdtnROxvWzJ1nK_vEGw/viewform?usp=sf_link" target="_blank" style="margin-top: 5px;">Contact Us</a>
+                                
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <!-- /.container-->
+            </div>
+            <!-- /.znav-container-->
+
+
+
+
+            <section class="p-0 color-white font-1">
+                <div class="background-holder overlay overlay-2" style="background-image:url(assets/images/about-company.jpg);"> </div>
+                <!--/.background-holder-->
+                <div class="container">
+                    <div class="row h-half align-items-center py-5">
+                        <div class="col-md-8 col-lg-5">
+                            <h1 class="fs-3 fs-md-4 mb-3">About Posh</h1>
+                            <p class="lead fs-xs-1">Responsive in design | Elegant in Style One Perfect Template for Anything</p>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+
+            <section class="font-1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2 hidden-md-down">
+                            <div class="perpendicular">
+                                <h2 class="color-9 fs-6 text-uppercase lh-0" style="transform: translateY(36px);">Our&nbsp;Story</h2>
+                            </div>
+                        </div>
+                        <div class="col-12 hidden-lg-up">
+                            <h2 class="mb-5">Our Story</h2>
+                        </div>
+                        <div class="col-lg-6">
+                            <h5 class="mb-4">&#8212; Story Behind Posh</h5>
+                            <p class="lead mb-5 color-5">For years, ThemeWagon templates have stood for beautiful design and excellent quality. Posh is more than all that; it's built to take on the future - with rethink coding structures, great feel and ideal balance of performance
+                                &amp; elegance. What's the best, Posh will stay error free &amp; up to date with the excellent customer support and regular updates.</p>
+                            <h5 class="mb-4">&#8212; Mission &amp; Vision</h5>
+                            <p class="color-5 mb-lg-0 mb-5">Posh has the vision to be the trend setter among the existing templates in the market. It intends to help people do more and leave lasting, meaningful experiences for their clients and their audiences. The mission was to make
+                                it real. The core team worked very hard for last three years to make it happen. They believed in their abilities and created Posh as the right tool for your future. </p>
+                        </div>
+                        <div class="col-lg-4 pl-lg-5">
+                            <h5 class="mb-0">&#8212; Founded in</h5>
+                            <div class="fs-5 fw-100 mb-5">2017</div>
+                            <h5 class="mb-3">&#8212; Offices in</h5>
+                            <p class="fs-3 color-7 lh-1 mb-5 fw-300">Bristol &amp; London</p>
+                            <h5 class="mb-3">&#8212; Services</h5>
+                            <p class="lead color-5">Branding, Packaging, Websites, E-Commerce &amp; Marketing</p>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+
+            <section class="text-center background-11 font-1">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <h3 class="color-1 mb-4">Meet the makers</h3>
+                            <p class="color-4 lead">Whether you're building a landing page for your mobile app or an elegant, corporate website, Posh has layouts that cover your needs.</p>
+                            <hr class="short mb-8 color-8 mt-4"> </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+
+
+            <section class="py-0">
+                <div class="container-fluid px-0">
+                    <div class="row no-gutters text-center">
+                        <div class="col-lg-4 col-md-12">
+                            <div class="googlemap h-100" data-latlng="51.5228995,-0.1571674" data-scrollwheel="false" data-zoom="15" data-theme="SubtleGray" style="min-height: 400px;">
+                                <div class="marker-content py-3">
+                                    <h5>Madame Tussauds</h5>
+                                    <p>Museum chain for life-size wax replicas
+                                        <br>of famous celebrities &amp; historic icons. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-flex">
+                            <div class="background-holder overlay overlay-1" style="background-image:url(assets/images/contact-01.jpg);"> </div>
+                            <!--/.background-holder-->
+                            <div class="row no-gutters w-100 align-items-center py-8">
+                                <div class="col color-10">
+                                    <h4>Bristol HQ</h4>
+                                    <hr class="short">
+                                    <div class="my-4"></div>
+                                    <p class="l-h-2 font-1">35 King Street
+                                        <br>Bristol, BS1 4DZ
+                                        <br>
+                                        <a class="color-10" href="tel: +4401179226892">Tel: +44 (0)117 922 6892</a>
+                                    </p>
+                                    <div class="my-4"></div>
+                                    <a class="btn btn-outline-white btn-capsule btn-sm" href="#">Contact</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-flex">
+                            <div class="background-holder overlay overlay-1" style="background-image:url(assets/images/contact-02.jpg);"> </div>
+                            <!--/.background-holder-->
+                            <div class="row no-gutters w-100 align-items-center py-8">
+                                <div class="col color-10">
+                                    <h4>London</h4>
+                                    <hr class="short">
+                                    <div class="my-4"></div>
+                                    <p class="l-h-2 font-1">3rd Floor, 86-90 Paul Street
+                                        <br>London, EC2A 4NE
+                                        <br>
+                                        <a class="color-10" href="tel: +4402038564454">Tel: +44 (0)203 856 4454</a>
+                                    </p>
+                                    <div class="my-4"></div>
+                                    <a class="btn btn-outline-white btn-capsule btn-sm" href="#">Contact</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+
+
+
+
+
+            <footer class="background-1 color-8 py-3 fs--1 fw-600 font-heading">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-auto font-1">&copy; 2017 POSH &trade; Inc. </div>
+                        <div class="col fs-0 text-right">
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-behance"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-dribbble"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+        <!--  -->
+        <!--    JavaScripts-->
+        <!--    =============================================-->
+        <script src="assets/lib/jquery/dist/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+        <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
+        <script src="assets/js/core.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--  -->
+        <!--    Document Title-->
+        <!-- =============================================-->
+        <title>G | Full Suite Technology Company. Blockchain, Mobile and Web Development Solutions</title>
+        <!--  -->
+        <!--    Favicons-->
+        <!--    =============================================-->
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!--  -->
+        <!--    Stylesheets-->
+        <!--    =============================================-->
+        <!-- Default stylesheets-->
+        <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Template specific stylesheets-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i" rel="stylesheet">
+        <link href="assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/lib/iconsmind/iconsmind.css" rel="stylesheet">
+        <link href="assets/lib/css-hamburgers/dist/hamburgers.css" rel="stylesheet">
+        <link href="assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+        <link href="assets/lib/remodal/dist/remodal.css" rel="stylesheet">
+        <link href="assets/lib/remodal/dist/remodal-default-theme.css" rel="stylesheet">
+        <link href="assets/lib/prism/prism.css" rel="stylesheet">
+        <link href="assets/lib/semantic-ui-accordion/accordion.css" rel="stylesheet">
+        <link href="assets/lib/semantic-ui-transition/transition.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="animate.min.css">
+
+
+
+        <!-- Main stylesheet and color file-->
+        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/custom.css" rel="stylesheet"> 
+
+        <link rel="shortcut icon" href="7.ico" type="image/x-icon">
+        
+        <meta name="description" content="This is G - A Full Suite Technology Company. Blockchain, Mobile and Web Technology, Cloud Computing, Digital Marketing, Branding and Content Creation. "/>
+
+        <meta name="keywords" content="Full Stack, Full Suite, G Suite, Blockchain, Blockchain Solutions, Mobile Applications, Mobile App, Mobile Solutions, Techology, Technology Company, Technology Solutions". /-->
+
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107350529-1"></script>
+        
+        <script>
+                 window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments)};
+                gtag('js', new Date());
+
+                gtag('config', 'UA-107350529-1');
+        </script>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/TimeCircles.js"></script>
+        <link href="assets/css/TimeCircles.css" rel="stylesheet">   
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+        
+
+        <script type="text/javascript" >
+
+        $(document).ready(function(){
+
+            $(".example").TimeCircles({circle_bg_color: "#000000",time: {
+    Days: { color: "#FFD700" },
+    Hours: { color: "#FFD700" },
+    Minutes: { color: "#FFD700" },
+    Seconds: { color: "#FFD700" }
+    },animation: "smooth"}); 
+        })
+
+            var messagesRef = new Firebase('https://ic3cubes-db.firebaseio.com/');
+
+                   function postinquiry(e) {
+                     e.preventDefault();
+                   console.log('sadfasdfvalue');
+                    console.log(document.getElementById("name").value);
+        
+                    if(document.getElementById("name").value !== "" &&  document.getElementById("email").value !== "" &&  document.getElementById("message").value !== ""){
+                        var data ={
+                        name: document.getElementById("name").value,
+                        email: document.getElementById("email").value,
+                        message: document.getElementById("message").value,
+                        }
+                        messagesRef.push(data, function(error) {
+                         if (error){
+                            document.getElementById("message13").style.display = "block";
+                            console.log('Error has occured during saving process');
+                            document.getElementById("name").value='';
+                            document.getElementById("email").value='';
+                            document.getElementById("message").value='';
+
+                        /// $('#ErrormyModal').modal('show');
+                         }else{
+
+                        //  $(document).ready(function() {
+                        //        $("#myModal").modal('show');
+                        //  });
+                        //  $('#myModal').modal('show');
+                        document.getElementById("message12").style.display = "block";
+                        
+                            document.getElementById("name").value='';
+                            document.getElementById("email").value='';
+                            document.getElementById("message").value='';
+                            console.log("Data hss been saved succesfully");
+                         }
+                         
+                    })
+                    } else{
+                        document.getElementById("message14").style.display = "block";
+                            console.log('Validation Error');
+                        //$('#ValidationModal').modal('show');
+                    }
+        
+                    }
+                    function resetForm(){
+                        document.getElementById("message14").style.display = "none";
+                        document.getElementById("message13").style.display = "none";
+                        document.getElementById("message12").style.display = "none";
+
+                    }
+
+        </script>
+
+
+    </head>
+    
+
+    <body data-spy="scroll" data-target=".inner-link" data-offset="60">
+        <main>
+            <div class="znav-container znav-white znav-fixed border-bottom-nav color-10" id="znav-container">
+                <div class="container">
+                    <nav class="navbar navbar-toggleable-md">
+                        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <div class="hamburger hamburger--emphatic">
+                                <div class="hamburger-box">
+                                    <div class="hamburger-inner"></div>
+                                </div>
+                            </div>
+                        </button>
+                        <a class="navbar-brand overflow-hidden" href="index.html">
+                            <img src='assets/images/logo.png' alt='logo' width='60px'>
+                        </a>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            
+
+                            <ul class="navbar-nav ml-auto">
+
+
+                            <li>
+                                <a href="JavaScript:void(0)">ABOUT</a>
+                                <ul class="dropdown dropdown-push-left">
+                                                <li>
+                                                    <a href="page-about-company.html">Company</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="page-about-team.html">Team</a>
+                                                </li>
+                                                
+                                                <li>
+                                                    <a href="page-careers.html">Careers</a>
+                                                </li>
+                                                  
+                                     </ul>
+                            </li>    
+
+
+                            <li>
+                                <a href="JavaScript:void(0)">TECHNOLOGY</a>
+                                <ul class="dropdown dropdown-push-left">    
+
+
+                                                <li>
+                                                    <a href="home-digital-agency.html">Blockchain</a>
+                                                </li>   
+
+
+                                                <li>
+                                                    <a href="home-landing-nokia.html">Mobile</a>
+                                                </li> 
+
+
+                                                <li>
+                                                    <a href="home-landing-software.html">Web</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="page-services-1.html">Custom Software</a>
+                                                </li>
+
+                                      </ul>
+                            </li>
+
+                            <li>
+                                <a href="JavaScript:void(0)">EXPERTISE</a>
+                                <ul class="dropdown dropdown-push-left">    
+                                                <li>
+                                                    <a href="page-about-company.html">Blockchain</a>
+                                                </li>   
+
+
+                                                <li>
+                                                    <a href="page-about-company.html">Mobile</a>
+                                                </li> 
+
+
+                                                <li>
+                                                    <a href="page-about-company.html">Web</a>
+                                                </li>
+                                      </ul>
+                            </li>   
+
+
+                                 
+
+
+                            <li>
+                                    <a href="page-log-in.html">LOGIN</a>
+                            </li>
+
+
+                               <a class="btn btn-outline-black btn-xs text-uppercase ls ml-3" href="https://docs.google.com/forms/d/e/1FAIpQLSdKapEbHiPcEfMa4lKr9gxjj-vEjSVRdtnROxvWzJ1nK_vEGw/viewform?usp=sf_link" target="_blank" style="margin-top: 5px;">Contact Us</a>
+                                
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <!-- /.container-->
+            </div>
+            <!-- /.znav-container-->
+
+
+
+
+
+
+
+
+            <section>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-8 text-center">
+                            <h1 class="fs-3 mb-3 fw-400">The Ultimate Design Tool </h1>
+                            <p class="color-7 lead font-1 mb-6">With enormous built in layouts, rigorously tested and optimized for laptops, phones, tabs and every other devices; Posh empowers you to design sites in a more flexible and multitudinous way.</p>
+                        </div>
+                    </div>
+                    <div class="row font-1">
+                        <div class="col-lg-4 text-center text-lg-left mb-5 mb-lg-0">
+                            <img src="assets/images/header-03.jpg">
+                            <h5 class="mb-0 mt-4">Why choose Posh</h5>
+                            <p class="lead color-4">Future proof with Bootstrap 4</p>
+                            <p class="color-6 fs--1">The one single reason of choosing Posh is that it's future proof, built with Bootstrap 4. And the possibilities are limitless. </p>
+                        </div>
+                        <div class="col-lg-4 text-center text-lg-left mb-5 mb-lg-0">
+                            <img src="assets/images/generic-05.jpg">
+                            <h5 class="mb-0 mt-4">Leave your footprints</h5>
+                            <p class="lead color-4">Renovate the way you design</p>
+                            <p class="color-6 fs--1">Posh intends to help people do more and leave lasting, meaningful experiences for their clients and their audiences. </p>
+                        </div>
+                        <div class="col-lg-4 text-center text-lg-left mb-5 mb-lg-0">
+                            <img src="assets/images/header-07.jpg">
+                            <h5 class="mb-0 mt-4">Cover your needs</h5>
+                            <p class="lead color-4">Make any layouts you imagine</p>
+                            <p class="color-6 fs--1">Whether you're building a landing page for your mobile app or an elegant, corporate website, Posh has layouts that cover your needs.</p>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <hr class="color-9">
+            <section>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-8 text-center">
+                            <h1 class="fs-3 mb-3 fw-400">Easy Customizations</h1>
+                            <p class="color-7 lead font-1 mb-5">The indented codes and well documentation will make your life easy to shape your future.</p>
+                            <hr class="short color-8 mb-6">
+                            <img src="assets/images/macbook.jpg"> </div>
+                    </div>
+                    <div class="row justify-content-center mt-6">
+                        <div class="col-xl-9">
+                            <div class="row font-1">
+                                <div class="col-md-4 p-3">
+                                    <div class="media align-items-center">
+                                        <i class="d-flex mr-3 fs-3 icon-Money-2 color-primary"></i>
+                                        <div class="media-body">100+ Layouts</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 p-3">
+                                    <div class="media align-items-center">
+                                        <i class="d-flex mr-3 fs-3 icon-Add-UserStar color-primary"></i>
+                                        <div class="media-body">2088 Premium Icons</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 p-3">
+                                    <div class="media align-items-center">
+                                        <i class="d-flex mr-3 fs-3 icon-Monitor-Analytics color-primary"></i>
+                                        <div class="media-body">Tons of Features</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 p-3">
+                                    <div class="media align-items-center">
+                                        <i class="d-flex mr-3 fs-3 icon-Big-Data color-primary"></i>
+                                        <div class="media-body">Crafted with Bootstrap 4</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 p-3">
+                                    <div class="media align-items-center">
+                                        <i class="d-flex mr-3 fs-3 icon-Copyright color-primary"></i>
+                                        <div class="media-body">250+ Styled Components</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 p-3">
+                                    <div class="media align-items-center">
+                                        <i class="d-flex mr-3 fs-3 icon-Hello color-primary"></i>
+                                        <div class="media-body">Retina Ready</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 p-3">
+                                    <div class="media align-items-center">
+                                        <i class="d-flex mr-3 fs-3 icon-Big-Data color-primary"></i>
+                                        <div class="media-body">Pixel Perfect Design</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 p-3">
+                                    <div class="media align-items-center">
+                                        <i class="d-flex mr-3 fs-3 icon-Copyright color-primary"></i>
+                                        <div class="media-body">Detailed Documentation</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 p-3">
+                                    <div class="media align-items-center">
+                                        <i class="d-flex mr-3 fs-3 icon-Hello color-primary"></i>
+                                        <div class="media-body">Dedicated Support</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section>
+                <div class="background-holder overlay overlay-1" style="background-image:url(assets/images/team-officespace.jpg);"> </div>
+                <!--/.background-holder-->
+                <div class="container">
+                    <div class="row font-1 color-white">
+                        <div class="col">
+                            <h6 class="mb-2 text-uppercase ls">Let's get you started</h6>
+                            <h5>Start building beautiful pages easily with Posh</h5>
+                        </div>
+                        <div class="col-md-5 col-lg-4 mt-4 mt-md-0">
+                            <a class="btn btn-primary" href="#">Try Posh</a>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <footer class="background-1 color-8 py-3 fs--1 fw-600 font-heading">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-auto font-1">&copy; 2017 POSH &trade; Inc. </div>
+                        <div class="col fs-0 text-right">
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-behance"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-dribbble"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+        <!--  -->
+        <!--    JavaScripts-->
+        <!--    =============================================-->
+        <script src="assets/lib/jquery/dist/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+        <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="assets/js/core.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

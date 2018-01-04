@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--  -->
+        <!--    Document Title-->
+        <!-- =============================================-->
+        <title>G | Full Suite Technology Company. Blockchain, Mobile and Web Development Solutions</title>
+        <!--  -->
+        <!--    Favicons-->
+        <!--    =============================================-->
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!--  -->
+        <!--    Stylesheets-->
+        <!--    =============================================-->
+        <!-- Default stylesheets-->
+        <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Template specific stylesheets-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i" rel="stylesheet">
+        <link href="assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/lib/iconsmind/iconsmind.css" rel="stylesheet">
+        <link href="assets/lib/css-hamburgers/dist/hamburgers.css" rel="stylesheet">
+        <link href="assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+        <link href="assets/lib/remodal/dist/remodal.css" rel="stylesheet">
+        <link href="assets/lib/remodal/dist/remodal-default-theme.css" rel="stylesheet">
+        <link href="assets/lib/prism/prism.css" rel="stylesheet">
+        <link href="assets/lib/semantic-ui-accordion/accordion.css" rel="stylesheet">
+        <link href="assets/lib/semantic-ui-transition/transition.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="animate.min.css">
+
+
+
+        <!-- Main stylesheet and color file-->
+        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/custom.css" rel="stylesheet"> 
+
+        <link rel="shortcut icon" href="7.ico" type="image/x-icon">
+        
+        <meta name="description" content="This is G - A Full Suite Technology Company. Blockchain, Mobile and Web Technology, Cloud Computing, Digital Marketing, Branding and Content Creation. "/>
+
+        <meta name="keywords" content="Full Stack, Full Suite, G Suite, Blockchain, Blockchain Solutions, Mobile Applications, Mobile App, Mobile Solutions, Techology, Technology Company, Technology Solutions". /-->
+
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107350529-1"></script>
+        
+        <script>
+                 window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments)};
+                gtag('js', new Date());
+
+                gtag('config', 'UA-107350529-1');
+        </script>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/TimeCircles.js"></script>
+        <link href="assets/css/TimeCircles.css" rel="stylesheet">   
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+        
+
+        <script type="text/javascript" >
+
+        $(document).ready(function(){
+
+            $(".example").TimeCircles({circle_bg_color: "#000000",time: {
+    Days: { color: "#FFD700" },
+    Hours: { color: "#FFD700" },
+    Minutes: { color: "#FFD700" },
+    Seconds: { color: "#FFD700" }
+    },animation: "smooth"}); 
+        })
+
+            var messagesRef = new Firebase('https://ic3cubes-db.firebaseio.com/');
+
+                   function postinquiry(e) {
+                     e.preventDefault();
+                   console.log('sadfasdfvalue');
+                    console.log(document.getElementById("name").value);
+        
+                    if(document.getElementById("name").value !== "" &&  document.getElementById("email").value !== "" &&  document.getElementById("message").value !== ""){
+                        var data ={
+                        name: document.getElementById("name").value,
+                        email: document.getElementById("email").value,
+                        message: document.getElementById("message").value,
+                        }
+                        messagesRef.push(data, function(error) {
+                         if (error){
+                            document.getElementById("message13").style.display = "block";
+                            console.log('Error has occured during saving process');
+                            document.getElementById("name").value='';
+                            document.getElementById("email").value='';
+                            document.getElementById("message").value='';
+
+                        /// $('#ErrormyModal').modal('show');
+                         }else{
+
+                        //  $(document).ready(function() {
+                        //        $("#myModal").modal('show');
+                        //  });
+                        //  $('#myModal').modal('show');
+                        document.getElementById("message12").style.display = "block";
+                        
+                            document.getElementById("name").value='';
+                            document.getElementById("email").value='';
+                            document.getElementById("message").value='';
+                            console.log("Data hss been saved succesfully");
+                         }
+                         
+                    })
+                    } else{
+                        document.getElementById("message14").style.display = "block";
+                            console.log('Validation Error');
+                        //$('#ValidationModal').modal('show');
+                    }
+        
+                    }
+                    function resetForm(){
+                        document.getElementById("message14").style.display = "none";
+                        document.getElementById("message13").style.display = "none";
+                        document.getElementById("message12").style.display = "none";
+
+                    }
+
+        </script>
+
+
+    </head>
+    
+
+    <body data-spy="scroll" data-target=".inner-link" data-offset="60">
+        <main>
+            <div class="znav-container znav-white znav-fixed border-bottom-nav color-10" id="znav-container">
+                <div class="container">
+                    <nav class="navbar navbar-toggleable-md">
+                        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <div class="hamburger hamburger--emphatic">
+                                <div class="hamburger-box">
+                                    <div class="hamburger-inner"></div>
+                                </div>
+                            </div>
+                        </button>
+                        <a class="navbar-brand overflow-hidden" href="index.html">
+                            <img src='assets/images/logo.png' alt='logo' width='60px'>
+                        </a>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            
+
+                            <ul class="navbar-nav ml-auto">
+
+
+                            <li>
+                                <a href="JavaScript:void(0)">ABOUT</a>
+                                <ul class="dropdown dropdown-push-left">
+                                                <li>
+                                                    <a href="page-about-company.html">Company</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="page-about-team.html">Team</a>
+                                                </li>
+                                                
+                                                <li>
+                                                    <a href="page-careers.html">Careers</a>
+                                                </li>
+                                                  
+                                     </ul>
+                            </li>    
+
+
+                            <li>
+                                <a href="JavaScript:void(0)">TECHNOLOGY</a>
+                                <ul class="dropdown dropdown-push-left">    
+
+
+                                                <li>
+                                                    <a href="home-digital-agency.html">Blockchain</a>
+                                                </li>   
+
+
+                                                <li>
+                                                    <a href="home-landing-nokia.html">Mobile</a>
+                                                </li> 
+
+
+                                                <li>
+                                                    <a href="home-landing-software.html">Web</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="page-services-1.html">Custom Software</a>
+                                                </li>
+
+                                      </ul>
+                            </li>
+
+                            <li>
+                                <a href="JavaScript:void(0)">EXPERTISE</a>
+                                <ul class="dropdown dropdown-push-left">    
+                                                <li>
+                                                    <a href="page-about-company.html">Blockchain</a>
+                                                </li>   
+
+
+                                                <li>
+                                                    <a href="page-about-company.html">Mobile</a>
+                                                </li> 
+
+
+                                                <li>
+                                                    <a href="page-about-company.html">Web</a>
+                                                </li>
+                                      </ul>
+                            </li>   
+
+
+                                 
+
+
+                            <li>
+                                    <a href="page-log-in.html">LOGIN</a>
+                            </li>
+
+
+                               <a class="btn btn-outline-black btn-xs text-uppercase ls ml-3" href="https://docs.google.com/forms/d/e/1FAIpQLSdKapEbHiPcEfMa4lKr9gxjj-vEjSVRdtnROxvWzJ1nK_vEGw/viewform?usp=sf_link" target="_blank" style="margin-top: 5px;">Contact Us</a>
+                                
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <!-- /.container-->
+            </div>
+            <!-- /.znav-container-->
+
+
+
+
+
+
+            
+            <section class="has-parallax p-0 color-white">
+                <div class="background-holder parallax overlay overlay-0" style="background-image:url(assets/images/header5.jpg);" data-rellax-speed="-10"> </div>
+                <!--/.background-holder-->
+                <div class="container">
+                    <div class="row h-full align-items-center py-8">
+                        <div class="col-lg-7">
+                            <h1 class="fs-3 fs-md-5 mb-4 lh-f2">An award winning creative agency </h1>
+                            <p class="fs-md-2 fs-0 font-italic lh-2 mb-6 pr-xl-6">No matter the task, you will be surprised seeing the final results of your creation and crave for more. </p>
+                            <a class="btn btn-outline-white" href="#">Get started</a>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+
+               <section>
+                <div class="container">
+                    <div class="row text-center justify-content-center">
+                        <div class="col-lg-9">
+                            <h2 class="mb-4">Embracing the Future</h2>
+                            <p class="lead font-1 color-4">For years, ThemeWagon templates have stood for beautiful design and excellent quality. Posh is more than all that; it's built to take on the future - with rethink coding structures, great feel and ideal balance of performance
+                                &amp; elegance. What's the best, Posh will stay error free &amp; up to date with the excellent customer support and regular updates. </p>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+
+
+<section class="p-0">
+                <div class="container-fluid px-0">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 col-sm-6">
+                            <a href="#">
+                                <div class="hoverbox">
+                                    <img src="assets/images/portfolio/wide-01.jpg">
+                                    <div class="hoverbox-content color-white text-right row align-items-end background-black-30">
+                                        <div class="col-sm-12">
+                                            <div class="p-4">
+                                                <h4 class="mb-0">Responsive </h4>
+                                                <p>Supports all screen size</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <a href="#">
+                                <div class="hoverbox">
+                                    <img src="assets/images/portfolio/wide-02.jpg">
+                                    <div class="hoverbox-content color-white text-right row align-items-end background-black-30">
+                                        <div class="col-sm-12">
+                                            <div class="p-4">
+                                                <h4 class="mb-0">Retina ready</h4>
+                                                <p>Pixel perfect to every device</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <a href="#">
+                                <div class="hoverbox">
+                                    <img src="assets/images/portfolio/wide-03.jpg">
+                                    <div class="hoverbox-content color-white text-right row align-items-end background-black-30">
+                                        <div class="col-sm-12">
+                                            <div class="p-4">
+                                                <h4 class="mb-0">100+ Layouts</h4>
+                                                <p>Tested and Optimized with perfection</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <a href="#">
+                                <div class="hoverbox">
+                                    <img src="assets/images/portfolio/wide-04.jpg">
+                                    <div class="hoverbox-content color-white text-right row align-items-end background-black-30">
+                                        <div class="col-sm-12">
+                                            <div class="p-4">
+                                                <h4 class="mb-0">Premium Icons</h4>
+                                                <p>Free for lifetime </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <a href="#">
+                                <div class="hoverbox">
+                                    <img src="assets/images/portfolio/wide-05.jpg">
+                                    <div class="hoverbox-content color-white text-right row align-items-end background-black-30">
+                                        <div class="col-sm-12">
+                                            <div class="p-4">
+                                                <h4 class="mb-0">1000+ Features</h4>
+                                                <p>Easy to deploy</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <a href="#">
+                                <div class="hoverbox">
+                                    <img src="assets/images/portfolio/wide-06.jpg">
+                                    <div class="hoverbox-content color-white text-right row align-items-end background-black-30">
+                                        <div class="col-sm-12">
+                                            <div class="p-4">
+                                                <h4 class="mb-0">Detailed Documentation</h4>
+                                                <p>With well indented code</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+
+
+             <section class="font-1 text-center background-oxford">
+                <div class="container">
+                    <div class="row row align-items-center justify-content-center">
+                        <div class="col-lg-10 color-10 mb-5">
+                            <h3 class="fw-600">IC3 Tokens - On Sale Now</h3>
+                            <p class="fs-2 color-9">IC3 Tokens are Actively Being Issued</p>
+                        </div>  
+                        <div class="col-lg-4 mb-5 mb-lg-0">
+                            <h4 class="fs-3 color-10">336,482oz</h4>
+                            <h5 class="color-9 mb-1">Current Block # 1 </h5>
+                            <span class="font-1 color-9">Verified Vaulted Gold</span>
+                        
+                    
+                        </div>
+                        <div class="col-lg-4 mb-5 mb-lg-0">
+                            <h4 class="fs-3 color-10">261,644,250,000</h4>
+                            <h5 class="color-9 mb-1">IC3 Tokens Available</h5>
+                            <span class="font-1 color-9">Generated from Block # 1</span>
+                          
+                      
+                        </div>
+                        <div class="col-lg-4 mb-5 mb-lg-0">
+                            <h4 class="fs-3 color-10">10 Blocks</h4>
+                            <h5 class="color-9 mb-1">Total Distribution</h5>
+                            <span class="font-1 color-9">Blockchain + Gold Tokens in Continuum</span>
+                         
+                      
+                        </div>
+                    </div>
+
+                        <div class="row row align-items-center justify-content-center">
+                        <div class="col-lg-10 color-white mt-7 mb-3">
+                            <h3 class="fw-400">ICO Block # 1 - Now Live</h3>
+                            <p class="fs-2 color-8">All Tokens are generated off of physical gold within the vault. Tokens will be sold until all Blocks have been allocated.</p>
+                        </div>
+                        </div>
+
+                         <a class="btn btn-outline-danger btn-lg mt-5 mb-3 font-1 fs-1" href="https://docs.google.com/forms/d/e/1FAIpQLSeJTGNod4Ug6yyUnHFlfY_RwynKHPnx3fFUdb1ZSqO30DaK_Q/viewform" target="_blank"> Register Interest
+                         </a>
+
+                    <hr class="short color-8 mt-6">
+                </div>    
+                 
+            </section>   
+
+
+
+
+
+
+
+            <section class="font-1 py-3">
+                <div class="container">
+                    <div class="background-holder overlay overlay-2" style="background-image:url(assets/images/digital-agency-header.jpg);"> </div>
+                    <!--/.background-holder-->
+                    <div class="row px-lg-6 py-8 color-white">
+                        <div class="col-lg-8 col-xl-5">
+                            <h4>1000's of CSS Helpers</h4>
+                            <p class="lead">Customize colors, buttons, typography, gaps, spaces and everything for every single screen sizes individually without writing any CSS at all.</p>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section class="font-1 py-3">
+                <div class="container">
+                    <div class="background-holder overlay overlay-2" style="background-image:url(assets/images/careers-header.jpg);"> </div>
+                    <!--/.background-holder-->
+                    <div class="row px-lg-6 py-8 color-white">
+                        <div class="col-lg-8 col-xl-5">
+                            <h4>Prebuilt 100+ Layouts</h4>
+                            <p class="lead">With enormous built in layouts, rigorously tested and optimized for laptops, phones, tabs and every other devices; Posh empowers you to design sites in a more flexible and multitudinous way.</p>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section class="font-1 py-3">
+                <div class="container">
+                    <div class="background-holder overlay overlay-2" style="background-image:url(assets/images/education-01.jpg);"> </div>
+                    <!--/.background-holder-->
+                    <div class="row px-lg-6 py-8 color-white">
+                        <div class="col-lg-8 col-xl-5">
+                            <h4>Documented Code</h4>
+                            <p class="lead">Posh comes with high-end styling, well indented code and detailed documentation for each elements. Perfectly designed to guide starters.</p>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+
+
+
+            <section>
+                <div class="container">
+                    <div class="row font-1 text-center justify-content-center">
+                        <div class="col-xl-7">
+                            <h3 class="mb-2 fw-400">Purchase Posh now</h3>
+                            <p class="lead color-5 mb-5">Each purchase comes with a six months priority support and lifetime updates.</p>
+                            <a class="btn btn-primary" href="#">Try Posh</a>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+
+
+
+            <section class="hidden-sm-down py-5">
+                <div class="container text-center  color-1">
+                    <div class="owl-carousel owl-theme owl-nav-outer" data-dots="false" data-nav="true" data-items='{"0":{"items":2},"600":{"items":4},"1000":{"items":6}}' data-autoplay="true" data-margin="100" data-loop="true">
+                        <div class="item">
+                            <img class="radius-primary object-fit-cover" src="assets/images/partners/partner-3.png">
+                        </div>
+                        <div class="item">
+                            <img class="radius-primary object-fit-cover" src="assets/images/partners/partner-5.png">
+                        </div>
+                        <div class="item">
+                            <img class="radius-primary object-fit-cover" src="assets/images/partners/partner-6.png">
+                        </div>
+                        <div class="item">
+                            <img class="radius-primary object-fit-cover" src="assets/images/partners/partner-7.png">
+                        </div>
+                        <div class="item">
+                            <img class="radius-primary object-fit-cover" src="assets/images/partners/partner-3.png">
+                        </div>
+                        <div class="item">
+                            <img class="radius-primary object-fit-cover" src="assets/images/partners/partner-5.png">
+                        </div>
+                        <div class="item">
+                            <img class="radius-primary object-fit-cover" src="assets/images/partners/partner-6.png">
+                        </div>
+                        <div class="item">
+                            <img class="radius-primary object-fit-cover" src="assets/images/partners/partner-7.png">
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <footer class="background-1 color-8 py-3 fs--1 fw-600 font-heading">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-auto font-1">&copy; 2017 POSH &trade; Inc. </div>
+                        <div class="col fs-0 text-right">
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-behance"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-dribbble"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+        <!--  -->
+        <!--    JavaScripts-->
+        <!--    =============================================-->
+        <script src="assets/lib/jquery/dist/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+        <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
+        <script src="assets/lib/rellax/rellax.js"></script>
+        <script src="assets/js/core.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

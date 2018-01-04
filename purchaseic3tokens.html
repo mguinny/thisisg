@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--  -->
+        <!--    Document Title-->
+        <!-- =============================================-->
+        <title>IC3 Cubes - Mine + Vault + Token</title>
+        <!--  -->
+        <!--    Favicons-->
+        <!--    =============================================-->
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!--  -->
+        <!--    Stylesheets-->
+        <!--    =============================================-->
+        <!-- Default stylesheets-->
+        <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Template specific stylesheets-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i" rel="stylesheet">
+        <link href="assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/lib/iconsmind/iconsmind.css" rel="stylesheet">
+        <link href="assets/lib/css-hamburgers/dist/hamburgers.css" rel="stylesheet">
+        <link href="assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+        <link href="assets/lib/remodal/dist/remodal.css" rel="stylesheet">
+        <link href="assets/lib/remodal/dist/remodal-default-theme.css" rel="stylesheet">
+        <link href="assets/lib/prism/prism.css" rel="stylesheet">
+        <link href="assets/lib/semantic-ui-accordion/accordion.css" rel="stylesheet">
+        <link href="assets/lib/semantic-ui-transition/transition.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="animate.min.css">
+
+
+
+        <!-- Main stylesheet and color file-->
+        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/custom.css" rel="stylesheet"> 
+
+        <link rel="shortcut icon" href="13.ico" type="image/x-icon">
+        
+        <meta name="description" content="IC3 Cubes (IC3) Mine + Vault + Token. A verified gold token, utilizing blockchain technology to forge a new and innovative form of digital trade and exchange. Digital Gold Standard. Canadian Gold Crypto"/>
+
+        <meta name="keywords" content="Gold Token, Blockchain Gold, ICE Cubes, bitcoin gold, cryptoasset, digital gold, verified gold token, IC3 Cubes, IC3 Token, gold crypto, gold cryptocurrency, cryptoasset, blockchain gold, digital gold standard". /-->
+
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107350529-1"></script>
+        
+        <script>
+                 window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments)};
+                gtag('js', new Date());
+
+                gtag('config', 'UA-107350529-1');
+        </script>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/TimeCircles.js"></script>
+        <link href="assets/css/TimeCircles.css" rel="stylesheet">   
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+        
+
+        <script type="text/javascript" >
+
+        $(document).ready(function(){
+
+            $(".example").TimeCircles({circle_bg_color: "#000000",time: {
+    Days: { color: "#FFD700" },
+    Hours: { color: "#FFD700" },
+    Minutes: { color: "#FFD700" },
+    Seconds: { color: "#FFD700" }
+    },animation: "smooth"}); 
+        })
+
+            var messagesRef = new Firebase('https://ic3cubes-db.firebaseio.com/');
+
+                   function postinquiry(e) {
+                     e.preventDefault();
+                   console.log('sadfasdfvalue');
+                    console.log(document.getElementById("name").value);
+        
+                    if(document.getElementById("name").value !== "" &&  document.getElementById("email").value !== "" &&  document.getElementById("message").value !== ""){
+                        var data ={
+                        name: document.getElementById("name").value,
+                        email: document.getElementById("email").value,
+                        message: document.getElementById("message").value,
+                        }
+                        messagesRef.push(data, function(error) {
+                         if (error){
+                            document.getElementById("message13").style.display = "block";
+                            console.log('Error has occured during saving process');
+                            document.getElementById("name").value='';
+                            document.getElementById("email").value='';
+                            document.getElementById("message").value='';
+
+                        /// $('#ErrormyModal').modal('show');
+                         }else{
+
+                        //  $(document).ready(function() {
+                        //        $("#myModal").modal('show');
+                        //  });
+                        //  $('#myModal').modal('show');
+                        document.getElementById("message12").style.display = "block";
+                        
+                            document.getElementById("name").value='';
+                            document.getElementById("email").value='';
+                            document.getElementById("message").value='';
+                            console.log("Data hss been saved succesfully");
+                         }
+                         
+                    })
+                    } else{
+                        document.getElementById("message14").style.display = "block";
+                            console.log('Validation Error');
+                        //$('#ValidationModal').modal('show');
+                    }
+        
+                    }
+                    function resetForm(){
+                        document.getElementById("message14").style.display = "none";
+                        document.getElementById("message13").style.display = "none";
+                        document.getElementById("message12").style.display = "none";
+
+                    }
+
+        </script>
+
+
+    </head>
+    
+
+    <body data-spy="scroll" data-target=".inner-link" data-offset="60">
+        <main>
+            <div class="znav-container znav-oxford znav-fixed border-bottom-nav color-10" id="znav-container">
+                <div class="container">
+                    <nav class="navbar navbar-toggleable-md">
+                        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <div class="hamburger hamburger--emphatic">
+                                <div class="hamburger-box">
+                                    <div class="hamburger-inner"></div>
+                                </div>
+                            </div>
+                        </button>
+                        <a class="navbar-brand overflow-hidden" href="index.html">
+                            <img src='assets/images/cube.png' alt='logo' width='60px'>
+                        </a>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            
+
+                            <ul class="navbar-nav ml-auto">
+
+                                
+
+
+
+
+                                
+                                <li>
+                                    <a href="ic3tokens.html">About</a>
+                                   
+                                </li>
+                         
+
+                                <li>
+                                    <a href="whitepaper.html">Whitepaper</a>
+                                </li>
+
+
+
+                                <li>
+                                    <a href="purchaseic3tokens.html">Token</a>
+                                   
+                                </li>
+
+
+
+                                <li>
+                                 <a href="ic3cubesfaq.html">FAQ</a>     
+
+                                </li> 
+
+
+
+
+
+                                <a class="btn btn-outline-danger btn-xs text-uppercase ls ml-3" href="https://docs.google.com/forms/d/e/1FAIpQLSeJTGNod4Ug6yyUnHFlfY_RwynKHPnx3fFUdb1ZSqO30DaK_Q/viewform" target="_blank" style="margin-top: 4px;">Purchase IC3</a>
+                                
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <!-- /.container-->
+            </div>
+            <!-- /.znav-container-->
+
+
+
+
+
+
+           <section class="color-white text-center p-0">
+             <div class="background-holder overlay overlay-1 parallax h-100vh"style="background-image:url(assets/images/BG-55.jpg);" data-rellax-speed="-10"> </div>
+
+              <div class="container">
+                    <div class="row justify-content-center h-full align-items-center">
+                        <div class="col-lg-10">
+                            <h1 class="fs-4 fs-sm-5 mb-3">IC3 Tokens</h1>
+
+                            <h3 class="fw-400 color-9" style="margin-top: 48px;">Physical Weight + Blockchain Technology</h3>  
+                            
+             
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+<div id="block1">
+
+    <section class="background-oxford font-1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2 hidden-md-down">
+                            <div class="perpendicular">
+                                <h2 class="color-white fs-6 text-uppercase lh-0" style="transform: translateY(36px);">Purchase&nbsp;IC3</h2>
+                            </div>
+                        </div>
+                        <div class="col-12 hidden-lg-up">
+                            <h2 class="mb-5">IC3 Tokens</h2>
+                        </div>
+                        <div class="col-lg-6">
+
+                            <h5 class="mb-4 color-10">&#8212; IC3 Tokens - Now Available</h5>
+
+                            <p class="lead mb-4 color-9">Direct contact must be made to Purchase IC3 Tokens. A representative from IC3 Cubes will then connect with you to discuss the finer details and opportunities of purchasing IC3 Tokens.</p>
+                            
+
+                            <p class="lead mb-5 color-9">Transactions can be made via bank wire-transfer or e-transfer.</p>
+
+
+
+                            <h5 class="mb-4 color-10">&#8212; Token Issuance  + Holding Period</h5>
+
+                
+                            <p class="lead color-9 mb-4">Upon receipt of the funds, IC3 will issue an electronic receipt of IC3 Tokens - equivalent to the current weight, based on the settlement price of gold at the time of investment, with full transparency, auditability and smart contract. </p>
+
+                            <p class="lead color-9 mb-4">After a holding period, the balance will appear within the investor portal and the corresponding number of tokens will be allocated to their wallet.</p>
+
+                          
+                                <a class="btn btn-outline-danger btn-lg mt-5 mb-3 font-1 fs-1" href="https://s3-us-west-2.amazonaws.com/ic3cubes.com/IC3+Pricing+Example.pdf" target="_blank"> Pricing Example
+                                </a>
+
+                                <a class="btn btn-outline-danger btn-lg mt-3 mb-5 font-1 fs-1" href="https://docs.google.com/forms/d/e/1FAIpQLSeJTGNod4Ug6yyUnHFlfY_RwynKHPnx3fFUdb1ZSqO30DaK_Q/viewform" target="_blank"> Register Interest
+                                </a>
+                        
+
+                       
+                        </div>
+                        <div class="col-lg-4 pl-lg-5">
+                            <h5 class="mb-3 color-10">&#8212; IC3 Tokens Issued</h5>
+                            <div class="fs-3 color-8 lh-1 mb-5 fw-300">261,644,250,000</div>
+                            <h5 class="mb-3 color-10">&#8212; Gold Equivalent </h5>
+                            <div class="fs-3 color-8 lh-1 mb-5 fw-300">336,482 oz</div>
+                            <h5 class="mb-3 color-10">&#8212; Direct Purchases</h5>
+                            <p class="fs-3 color-8 lh-1 fw-300">Wire-Transfer</p>
+                            <p class="fs-3 color-8 lh-1 mb-5 fw-300">E-Transfer</p>
+                            <h5 class="mb-3 color-10">&#8212; Digital Certificates Issued</h5>
+                            <p class="fs-3 color-8 lh-1 mb-5 fw-300">Within 24hrs</p>
+                            <h5 class="mb-3 color-10">&#8212; Contact Us</h5>
+                            <p class="fs-3 color-8 lh-1 mb-5 fw-300">email@ic3cubes.com</p>
+                             
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+</div>
+
+
+
+
+<div id="tokenStructure">
+            <section class="background-2">
+                
+                <div class="container">
+                    <h3 class="text-center color-10 mb-7">Trust & Transparency</h3>
+                    <div class="row">
+
+               
+                        <div class="col-xl-6 mb-5">
+                            <h5 class="color-white mb-1">Direct Relationship</h5>
+                            <p class="color-8 mt-2 font-1 fs-1 fw-300">Block - 1 gives investors the ability to forge a direct relationship with a company that is bringing a significant, verifiable, gold supply to market. </p> 
+                        </div>
+
+                        <div class="col-xl-6 mb-5">
+                            <h5 class="color-white  mb-1">First Refusal</h5>
+                            <p class="color-8 mt-2 font-1 fs-1 fw-300">Participating in Block - 1 ensures the right to first refusal on all subsequent IC3 Token Blocks before being released to the general public.</p>
+                        </div>
+
+                        <div class="col-xl-6 mb-5">
+                            <h5 class="color-white  mb-1">Custom Contracts</h5>
+                            <p class="color-8 mt-2 font-1 fs-1 fw-300">Investments of notable value shall be privy to custom purchase agreements and benefits. Direct Contact must be made to participate at this stage.</p> 
+                        </div>
+
+                        <div class="col-xl-6 mb-5">
+                            <h5 class="color-white  mb-1">Purveyour of Value</h5>
+                            <p class="color-8 mt-2 font-1 fs-1 fw-300">History demonstrates that you will receive more IC3 Tokens today than you would by investing in subsequent lots. IC3 Tokens are now available.</p>
+                        </div>
+
+                    </div>
+           
+                    <!--/.row-->
+                </div>
+
+
+
+               
+                <!--/.container-->
+        
+</section>
+</div>
+
+
+
+<div id="theProcess">
+
+
+
+<section class="background-black text-center">
+                <div class="container">
+
+                    <div class="row justify-content-center">
+
+                        <div class="col-lg-10 mb-5">
+                            <h3 class="color-10">The Process</h3>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <img class="mb-5 mb-lg-0" src="assets/images/purchase.png">
+                        </div>
+                        
+                    </div>
+      
+                       
+                </div>
+                    <!--/.row-->
+                <!--/.container-->
+</section>
+
+
+</div>
+
+
+
+
+
+
+
+<div id="tokenVerification">
+
+<section class="color-white py-0">
+                
+                <div class="background-holder overlay overlay-0 parallax h-100vh" style="background-image:url(assets/images/goldbars.jpg);" data-rellax-speed="-10"> </div>
+
+          
+
+                <!--/.background-holder-->
+                 <div class="container">
+                    <div class="row" style="padding-top: 120px; padding-bottom: 120px;">
+                        <div class="col-lg-8 font-1">
+                            <h3 class="color-white mb-3">Token Verification</h3>
+                            <hr class="short left color-white" align="left">
+                            <p class="font-1 mb-3  fs-1 fw-300">Each IC3 Token transaction will be subject to an initial $10.00 CAD verification fee, which assigns the physical gold within the vault to the newly issued tokens.</p>
+
+                            <p class="font-1 mb-3  fs-1 fw-300">Additionally, when the owner chooses to return the Token there will be a $10.00 CAD administration fee. These are the only fees associated with an IC3 Token transaction.</p>
+                            
+
+                            <ul class="fs-1 pl-0 mt-4 bullet-inside color-white lh-3 fw-500">
+                                <li>Our fees are the lowest in the industy.</li>
+                                 <li>Minimum Purchase of $1,000 CAD (or equivalent) </li>
+                                <li>Sales Representatives are available.</li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+</section>
+
+</div>
+
+
+
+ <!--section class="py-8 background-1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h3 class="mb-0 color-10 mb-3">Digital Gold Standard</h3>
+                            <hr class="short left my-3 color-10" align="left">
+                            <p class="color-8 mb-3 font-1">The IC3 Token represents an authentic gold cryptoasset with a significant supply that will have a profound impact on investment, trade and exchange of the future. </p>
+
+                            <p class="color-8 mb-3 font-1">There are no applicable sales tax or elongated vaulting fees. IC3 is the "blue chip" crypto option to invest in gold.</p>
+
+                            <p class="color-8 mb-3 font-1">For those who are not active within the world of Blockchain technology, IC3 Tokens represents an ideal entry point into the technological revolution.</p>
+
+
+                            <p class="color-8 mb-3 font-1">The IC3 ecosystem is the Mine + Vault + Token, no other gold cryptoasset offers this security. Investing in Gold via the IC3 Token, is the safest,  and most secure way to benefit from the appreciation of gold. </p>
+
+
+
+
+                        </div>
+                        <div class="col-md-4 pl-lg-5 pl-xl-6 mt-5 mt-md-0">
+                            <h5 class="mb-0 color-10">IC3 Cubes</h5>
+                            <hr class="short left my-3 color-10" align="left">
+                            <div class="font-1">
+                                <a class="py-1 d-inline-block fw-300 py-1 color-8" >Eco-System</a>
+                                <br>
+                                <a class="py-1 d-inline-block fw-300 py-1 color-8" >Gold Supply</a>
+                                <br>
+                                <a class="py-1 d-inline-block fw-300 py-1 color-8" >Security</a>
+                                <br>
+                                <a class="py-1 d-inline-block fw-300 py-1 color-8" >Technology Initiatives</a>
+                                <br>
+                                <a class="py-1 d-inline-block fw-300 py-1 color-8" >Mainstream Adoption</a>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+          
+</section-->
+
+
+
+           <footer class="background-oxford font-1" style="padding-top: 64px;">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-3">
+                            
+                            <img class="d-block mb-4" src="assets/images/cube.png" style="max-width: 200px; margin-top: 28px;">
+                            
+                            <a class="p-3 color-8" href="https://medium.com/@ic3cubes">
+                                <i class="fa fa-medium fa-3"></i>
+                            </a>
+                            <a class="p-2 color-8" href="https://www.linkedin.com/company/25176234/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a class="p-2 color-8" href="https://twitter.com/ic3cubesgold">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                             <a class="p-2 color-8" href="https://www.facebook.com/ic3cubesgold">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a class="p-2 color-8" href="https://www.instagram.com/ic3cubes">
+                                <i class="fa fa-instagram fa-2"></i>
+                            </a>
+                            
+                            
+
+                            <a class="p-2 color-8 d-block" style="margin-top: 20px;">
+                                <i class="fa fa-envelope"></i>
+                                <span class="font-1">email@ic3cubes.com</span>
+                            </a>
+
+                            <a class="p-2 color-8 d-block">
+                             
+                                <span class="font-1">#ic3cubesgold</span>
+                            </a>
+
+                              
+                          
+
+                            
+
+                        </div>
+                    
+                    <!--div class="col-1 text-center hidden-lg-down border-right" style="border-color: rgba(255,255, 255,0.1); margin-top: 28px;"></div-->
+
+                        <div class="col-lg-3 pl-lg-4" style="margin-top: 28px;">
+                            <div class="row">
+                                <div class="col-6">
+
+                                    <a class="btn btn-link btn-sm color-8 pl-0" href="https://s3-us-west-2.amazonaws.com/ic3cubes.com/IC3+Whitepaper.pdf" target="_blank">Whitepaper</a>
+
+                                    <a class="btn btn-link btn-sm color-8 pl-0" href="https://s3-us-west-2.amazonaws.com/ic3cubes.com/IC3+Pricing+Example.pdf" target="_blank">Pricing Example</a>
+
+                                    <a class="btn btn-link btn-sm mb-3 color-8 pl-0" href="https://docs.google.com/forms/d/e/1FAIpQLSeJTGNod4Ug6yyUnHFlfY_RwynKHPnx3fFUdb1ZSqO30DaK_Q/viewform" target="_blank">Register IC3 Interest</a>
+                 
+                                                         
+                                    <a class="btn btn-link btn-sm color-10 pl-0" >My Account - Coming Soon</a>
+                                    <a class="btn btn-link btn-sm mb-3 color-10 pl-0" >Login - Coming Soon</a>
+                    
+                                </div>
+                            </div>
+
+                             <div class="row">
+                                
+                             <div class="col-6">
+     
+                                    <a class="btn btn-link btn-sm color-8 pl-0" href="https://s3-us-west-2.amazonaws.com/ic3cubes.com/TermsOfUse.pdf" target="_blank">Terms of Use</a>
+                                    <a class="btn btn-link btn-sm color-8 pl-0" href="https://s3-us-west-2.amazonaws.com/ic3cubes.com/Privacy+Policy.pdf" target="_blank">Privacy Policy</a>
+                                </div>
+
+                            </div>
+
+                        </div>                     
+
+
+                   <div class="col-lg-6 font-1">
+                            <h3 class="my-4 fw-400 color-white">Connect with Us</h3>
+
+                            <div class = "messageAlert fw-400 color-10" id = "message12" style="display:none"><span >Thank you for your Interest. The IC3 Cubes team will connect with you shortly.</span>        </div>
+                            
+                            <div class = "messageAlert2" "fw-400 color-white" id = "message13" style="display:none"><span >There seems to be a problem with our System. Please email us at info@ic3cubes.com</span>        </div>
+                            
+                            <div class = "messageAlert3" "fw-400 color-white" id = "message14" style="display:none"><span >Please Fill all the fields.</span>      </div>
+
+
+                            <form class="my-4 zform" method="post" onsubmit="postinquiry(event)">
+                                <div class="form-group">
+                                    <input class="form-control" type="hidden" name="to" value="username@domain.extension"> </div>
+                               
+                                <div class="form-group">
+                                    <input class="form-control" id = "name" type="text" placeholder="Name" name="name" required> </div>
+
+                                <div class="form-group">
+                                    <input class="form-control" id ="email" type="email" placeholder="Email" name="from" required> </div>
+
+                                <div class="form-group">
+                                    <textarea class="form-control" id="message" rows="8" name="message" placeholder="Write your massage..."></textarea>
+                                </div>
+
+                                <div class="form-group mb-lg-0">
+                                    <input class="btn btn-outline-danger btn-block" type="submit" name="submit" value="SEND"> </div>
+                                <div class="zform-feedback mt-3"></div>
+
+                            </form>
+                        </div>
+                  
+                  
+
+
+                
+               <div class="row justify-content-center color-6" style="margin-top: 42px;">
+                    <p>Disclaimer - IC3 Cubes is a private company, representing a private vault. The information published on this website is not a public offer of IC3 Tokens or IC3 Cubes.com company. The responsibility for the decisions you make based on the information published on this website is yours.
+                    </p>  
+
+                <p>&copy;2017 IC3 CUBES Group Inc. IC3 CUBES Token ERC20. All Rights Reserved. IC3 CUBES Token is a Registered Trademark of ic3cubes.com.</p>
+                </div>                     
+              
+                    </div>
+                    <!--/.row-->
+               </div>
+                
+            </footer>
+        </main>
+        <!--  -->
+        <!--    JavaScripts-->
+        <!--    =============================================-->
+        <script src="assets/lib/jquery/dist/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+        <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
+        <script src="assets/lib/rellax/rellax.js"></script>
+        <script src="assets/lib/typed.js/dist/typed.min.js"></script>
+        <script src="assets/lib/isotope/dist/isotope.pkgd.js"></script>
+        <script src="assets/js/googlemap.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoK8GIrOHzHwnzHCyqrdtmTpUWcdrTTD8&callback=initMap"></script>
+        <script src="assets/js/core.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

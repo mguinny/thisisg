@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--  -->
+        <!--    Document Title-->
+        <!-- =============================================-->
+        <title>G | Full Suite Technology Company. Blockchain, Mobile and Web Development Solutions</title>
+        <!--  -->
+        <!--    Favicons-->
+        <!--    =============================================-->
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!--  -->
+        <!--    Stylesheets-->
+        <!--    =============================================-->
+        <!-- Default stylesheets-->
+        <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Template specific stylesheets-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i" rel="stylesheet">
+        <link href="assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/lib/iconsmind/iconsmind.css" rel="stylesheet">
+        <link href="assets/lib/css-hamburgers/dist/hamburgers.css" rel="stylesheet">
+        <link href="assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+        <link href="assets/lib/remodal/dist/remodal.css" rel="stylesheet">
+        <link href="assets/lib/remodal/dist/remodal-default-theme.css" rel="stylesheet">
+        <link href="assets/lib/prism/prism.css" rel="stylesheet">
+        <link href="assets/lib/semantic-ui-accordion/accordion.css" rel="stylesheet">
+        <link href="assets/lib/semantic-ui-transition/transition.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="animate.min.css">
+
+
+
+        <!-- Main stylesheet and color file-->
+        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/custom.css" rel="stylesheet"> 
+
+        <link rel="shortcut icon" href="7.ico" type="image/x-icon">
+        
+        <meta name="description" content="This is G - A Full Suite Technology Company. Blockchain, Mobile and Web Technology, Cloud Computing, Digital Marketing, Branding and Content Creation. "/>
+
+        <meta name="keywords" content="Full Stack, Full Suite, G Suite, Blockchain, Blockchain Solutions, Mobile Applications, Mobile App, Mobile Solutions, Techology, Technology Company, Technology Solutions". /-->
+
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107350529-1"></script>
+        
+        <script>
+                 window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments)};
+                gtag('js', new Date());
+
+                gtag('config', 'UA-107350529-1');
+        </script>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/TimeCircles.js"></script>
+        <link href="assets/css/TimeCircles.css" rel="stylesheet">   
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+        
+
+        <script type="text/javascript" >
+
+        $(document).ready(function(){
+
+            $(".example").TimeCircles({circle_bg_color: "#000000",time: {
+    Days: { color: "#FFD700" },
+    Hours: { color: "#FFD700" },
+    Minutes: { color: "#FFD700" },
+    Seconds: { color: "#FFD700" }
+    },animation: "smooth"}); 
+        })
+
+            var messagesRef = new Firebase('https://ic3cubes-db.firebaseio.com/');
+
+                   function postinquiry(e) {
+                     e.preventDefault();
+                   console.log('sadfasdfvalue');
+                    console.log(document.getElementById("name").value);
+        
+                    if(document.getElementById("name").value !== "" &&  document.getElementById("email").value !== "" &&  document.getElementById("message").value !== ""){
+                        var data ={
+                        name: document.getElementById("name").value,
+                        email: document.getElementById("email").value,
+                        message: document.getElementById("message").value,
+                        }
+                        messagesRef.push(data, function(error) {
+                         if (error){
+                            document.getElementById("message13").style.display = "block";
+                            console.log('Error has occured during saving process');
+                            document.getElementById("name").value='';
+                            document.getElementById("email").value='';
+                            document.getElementById("message").value='';
+
+                        /// $('#ErrormyModal').modal('show');
+                         }else{
+
+                        //  $(document).ready(function() {
+                        //        $("#myModal").modal('show');
+                        //  });
+                        //  $('#myModal').modal('show');
+                        document.getElementById("message12").style.display = "block";
+                        
+                            document.getElementById("name").value='';
+                            document.getElementById("email").value='';
+                            document.getElementById("message").value='';
+                            console.log("Data hss been saved succesfully");
+                         }
+                         
+                    })
+                    } else{
+                        document.getElementById("message14").style.display = "block";
+                            console.log('Validation Error');
+                        //$('#ValidationModal').modal('show');
+                    }
+        
+                    }
+                    function resetForm(){
+                        document.getElementById("message14").style.display = "none";
+                        document.getElementById("message13").style.display = "none";
+                        document.getElementById("message12").style.display = "none";
+
+                    }
+
+        </script>
+
+
+    </head>
+    
+
+    <body data-spy="scroll" data-target=".inner-link" data-offset="60">
+        <main>
+            <div class="znav-container znav-white znav-fixed border-bottom-nav color-10" id="znav-container">
+                <div class="container">
+                    <nav class="navbar navbar-toggleable-md">
+                        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <div class="hamburger hamburger--emphatic">
+                                <div class="hamburger-box">
+                                    <div class="hamburger-inner"></div>
+                                </div>
+                            </div>
+                        </button>
+                        <a class="navbar-brand overflow-hidden" href="index.html">
+                            <img src='assets/images/logo.png' alt='logo' width='60px'>
+                        </a>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            
+
+                            <ul class="navbar-nav ml-auto">
+
+
+                            <li>
+                                <a href="JavaScript:void(0)">ABOUT</a>
+                                <ul class="dropdown dropdown-push-left">
+                                                <li>
+                                                    <a href="page-about-company.html">Company</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="page-about-team.html">Team</a>
+                                                </li>
+                                                
+                                                <li>
+                                                    <a href="page-careers.html">Careers</a>
+                                                </li>
+                                                  
+                                     </ul>
+                            </li>    
+
+
+                            <li>
+                                <a href="JavaScript:void(0)">TECHNOLOGY</a>
+                                <ul class="dropdown dropdown-push-left">    
+
+
+                                                <li>
+                                                    <a href="home-digital-agency.html">Blockchain</a>
+                                                </li>   
+
+
+                                                <li>
+                                                    <a href="home-landing-nokia.html">Mobile</a>
+                                                </li> 
+
+
+                                                <li>
+                                                    <a href="home-landing-software.html">Web</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="page-services-1.html">Custom Software</a>
+                                                </li>
+
+                                      </ul>
+                            </li>
+
+                            <li>
+                                <a href="JavaScript:void(0)">EXPERTISE</a>
+                                <ul class="dropdown dropdown-push-left">    
+                                                <li>
+                                                    <a href="page-about-company.html">Blockchain</a>
+                                                </li>   
+
+
+                                                <li>
+                                                    <a href="page-about-company.html">Mobile</a>
+                                                </li> 
+
+
+                                                <li>
+                                                    <a href="page-about-company.html">Web</a>
+                                                </li>
+                                      </ul>
+                            </li>   
+
+
+                                 
+
+
+                            <li>
+                                    <a href="page-log-in.html">LOGIN</a>
+                            </li>
+
+
+                               <a class="btn btn-outline-black btn-xs text-uppercase ls ml-3" href="https://docs.google.com/forms/d/e/1FAIpQLSdKapEbHiPcEfMa4lKr9gxjj-vEjSVRdtnROxvWzJ1nK_vEGw/viewform?usp=sf_link" target="_blank" style="margin-top: 5px;">Contact Us</a>
+                                
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <!-- /.container-->
+            </div>
+            <!-- /.znav-container-->
+
+
+
+
+
+            <section class="color-white p-0" id="">
+                <div class="background-holder overlay" style="background-image:url(assets/images/nokia-header.jpg);"> </div>
+                <!--/.background-holder-->
+                <div class="container">
+                    <div class="row h-lg-100vh">
+                        <div class="col-md-6 align-self-center py-8 edge-fix-vertical-align">
+                            <h4 class="mb-3">Nokia 5</h4>
+                            <h1 class="fs-4 fs-sm-5">Balanced for work and play</h1>
+                        </div>
+                        <div class="col-lg-4 offset-lg-2 hidden-md-down">
+                            <img class="mt-8" src="assets/images/nokia-5.png">
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 font-1">
+                            <h2 class="lh-f2">The trend of future web &amp; mobile experience</h2>
+                            <ul class="fs-1 pl-0 mt-4 bullet-inside color-4 lh-3 fw-300">
+                                <li>Seamless integration with Bootstrap 4&reg;</li>
+                                <li>100+ Layouts with enormous features</li>
+                                <li>Detailed documentation for extra convenience</li>
+                            </ul>
+                            <p class="mt-4 lead">&euro;
+                                <span class="fs-4">189</span>
+                            </p>
+                            <div>
+                                <span class="fs--1 color-1 mr-3">Get notified when updates are available.</span>
+                                <a class="btn btn-outline-primary" href="#">Sign up</a>
+                            </div>
+                            <p class="fs--1 color-5 mt-5">These sections are built for the landing page of Nokia 5
+                                <br> depending on your needs, you can customize and make it your own. </p>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section class="background-10 py-8">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4">
+                            <h5>The design</h5>
+                            <h3>Quality you can feel in every detail</h3>
+                            <p class="my-5 lead font-1 color-4">We designed Posh with our hallmark attention to detail. The smooth, minimalist design is made with the mighty bootstrap 4; the next big thing that will revolutionize the way people create a website.</p>
+                            <a class="btn btn-outline-primary mb-5 mb-lg-0"
+                                href="#">Watch the product video</a>
+                        </div>
+                        <div class="col-lg-8 pl-lg-6">
+                            <img src="assets/images/nokia-01.png">
+                        </div>
+                    </div>
+                    <div class="row mt-8">
+                        <div class="col-lg-4 pl-lg-6 push-lg-8">
+                            <h3>Beautifully seamless craftsmanship</h3>
+                            <p class="my-5 lead font-1 color-4">Posh has a totally clean, well-documented codes without any error or bugs in a line; which has been maintained from the very begining to the end. Together the beautiful design and the W3C validated code will give you more power
+                                and freedom to create amazing websites.</p>
+                        </div>
+                        <div class="col-lg-8 pull-lg-4">
+                            <img class="mb-5 mb-lg-0" src="assets/images/nokia-02.png">
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+
+            <section>
+                <div class="container">
+                    <div class="row text-center justify-content-center">
+                        <div class="col-lg-9">
+                            <h2 class="mb-4">Embracing the Future</h2>
+                            <p class="lead font-1 color-4">For years, ThemeWagon templates have stood for beautiful design and excellent quality. Posh is more than all that; it's built to take on the future - with rethink coding structures, great feel and ideal balance of performance
+                                &amp; elegance. What's the best, Posh will stay error free &amp; up to date with the excellent customer support and regular updates. </p>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+            
+            <section class="py-0">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col px-0">
+                            <img src="assets/images/nokia-banner-01.jpg">
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section>
+                <div class="container">
+                    <div class="row text-center justify-content-center">
+                        <div class="col-lg-9">
+                            <img src="assets/images/nokia-banner-02.jpg">
+                        </div>
+                    </div>
+                    <div class="row text-center justify-content-center">
+                        <div class="col-lg-6">
+                            <h4 class="mt-4 mb-2">Fit into all screen sizes</h4>
+                            <p class="lead font-1 color-4">Posh fits smoothly in all the screen sizes including desktops, laptops, tablets, iPads and more.</p>
+                        </div>
+                    </div>
+                    <div class="row text-center justify-content-center mt-6">
+                        <div class="col-lg-9">
+                            <img src="assets/images/nokia-banner-03.jpg">
+                        </div>
+                    </div>
+                    <div class="row text-center justify-content-center">
+                        <div class="col-lg-6">
+                            <h4 class="mt-4 mb-2">Make better layouts at ease</h4>
+                            <p class="lead font-1 color-4">We just upgraded you as a web designer, thanks to the possibilities of making infinite layouts with Posh in uncomplicated and fluent ways. That's a fancy way of saying that you can make great websites. </p>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section class="background-11">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h5 class="mb-1">The details</h5>
+                            <h2>Posh</h2>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-6 font-1">
+                        <div class="col-lg-4">
+                            <h4>Outside</h4>
+                            <ul class="pl-0 color-4 fw-300">
+                                <li class="mb-2">100+ Beautiful Layouts </li>
+                                <li class="mb-2">30+ Different Set of Elements</li>
+                                <li class="mb-2">Redesigned Bootstrap 4 Elements</li>
+                                <li class="mb-2">10 Niche Demos</li>
+                                <li class="mb-2">Elegant &amp; Modern Design</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 px-lg-5 text-center">
+                            <div class="owl-carousel owl-theme owl-dot-round" data-dots="true" data-nav="false" data-items='{"0":{"items":1}}' data-autoplay="true" data-margin="30" data-loop="true">
+                                <a class="item" href="#">
+                                    <img class="w-100 img-responsive my-lg-0 my-6" src="assets/images/nokia-5-blue.png">
+                                </a>
+                                <a class="item" href="#">
+                                    <img class="w-100 img-responsive my-lg-0 my-6" src="assets/images/nokia-5-silver.png">
+                                </a>
+                                <a class="item" href="#">
+                                    <img class="w-100 img-responsive my-lg-0 my-6" src="assets/images/nokia-5-black.png">
+                                </a>
+                                <a class="item" href="#">
+                                    <img class="w-100 img-responsive my-lg-0 my-6" src="assets/images/nokia-5-copper.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <h4>Inside</h4>
+                            <ul class="pl-0 color-4 fw-300">
+                                <li class="mb-2">Intended &amp; documented code</li>
+                                <li class="mb-2">BEM naming convention</li>
+                                <li class="mb-2">Atomic CSS &amp; Pug file</li>
+                                <li class="mb-2">SASS Included</li>
+                                <li class="mb-2">Working Contact Form</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center mt-6">
+                            <a class="btn btn-outline-primary" href="#">See full specs</a>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section>
+                <div class="container">
+                    <div class="text-center">
+                        <h5>Still looking?</h5>
+                        <h3>Find the perfect demos for you</h3>
+                    </div>
+                    <div class="row mt-6">
+                        <a class="color-1 col-lg-4 mb-6" href="#">
+                            <img src="assets/images/nokia-03.jpg">
+                            <h4 class="mb-2 mt-4">Travel Agency</h4>
+                            <p class="lead font-1 d-inline-block color-4">Make a beautiful travel agency website with the appropriate sections and elements. </p>
+                        </a>
+                        <a class="color-1 col-lg-4 mb-6" href="#">
+                            <img src="assets/images/nokia-04.jpg">
+                            <h4 class="mb-2 mt-4">Digital Agency</h4>
+                            <p class="lead font-1 d-inline-block color-4">Create an elegant website for your startup, business or, corporate agency.</p>
+                        </a>
+                        <a class="color-1 col-lg-4 mb-6" href="#">
+                            <img src="assets/images/nokia-05.jpg">
+                            <h4 class="mb-2 mt-4">Landing Pages</h4>
+                            <p class="lead font-1 d-inline-block color-4">From Nokia to Apple &amp; product to apps; build all types of landing pages with Posh.</p>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <a class="btn btn-outline-primary" href="#">See All phones</a>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <footer class="background-1 color-8 py-3 fs--1 fw-600 font-heading">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-auto font-1">&copy; 2017 POSH &trade; Inc. </div>
+                        <div class="col fs-0 text-right">
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-behance"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-dribbble"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+        <!--  -->
+        <!--    JavaScripts-->
+        <!--    =============================================-->
+        <script src="assets/lib/jquery/dist/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+        <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
+        <script src="assets/js/core.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
