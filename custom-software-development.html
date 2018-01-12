@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--  -->
+        <!--    Document Title-->
+        <!-- =============================================-->
+        <title>Full Suite Technology Company. Blockchain, Mobile and Web Development Solutions</title>
+        <!--  -->
+        <!--    Favicons-->
+        <!--    =============================================-->
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!--  -->
+        <!--    Stylesheets-->
+        <!--    =============================================-->
+        <!-- Default stylesheets-->
+        <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Template specific stylesheets-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i" rel="stylesheet">
+        <link href="assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/lib/iconsmind/iconsmind.css" rel="stylesheet">
+        <link href="assets/lib/css-hamburgers/dist/hamburgers.css" rel="stylesheet">
+        <link href="assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+        <link href="assets/lib/remodal/dist/remodal.css" rel="stylesheet">
+        <link href="assets/lib/remodal/dist/remodal-default-theme.css" rel="stylesheet">
+        <link href="assets/lib/prism/prism.css" rel="stylesheet">
+        <link href="assets/lib/semantic-ui-accordion/accordion.css" rel="stylesheet">
+        <link href="assets/lib/semantic-ui-transition/transition.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="animate.min.css">
+
+
+
+        <!-- Main stylesheet and color file-->
+        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/custom.css" rel="stylesheet"> 
+
+        <link rel="shortcut icon" href="7.ico" type="image/x-icon">
+        
+        <meta name="description" content="This is G - A Full Suite Technology Company. Blockchain, Mobile and Web Development, Cloud Computing, Digital Marketing, Branding and Content Creation. "/>
+
+        <meta name="keywords" content="Full Stack, Full Suite, G Suite, Blockchain, Blockchain Solutions, Mobile Applications, Mobile App, Mobile Solutions, Techology, Technology Company, Technology Solutions, Toronto, Montreal, London, Windsor Ontario, Detroit Michigan". /-->
+
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107350529-1"></script>
+        
+        <script>
+                 window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments)};
+                gtag('js', new Date());
+
+                gtag('config', 'UA-107350529-1');
+        </script>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/TimeCircles.js"></script>
+        <link href="assets/css/TimeCircles.css" rel="stylesheet">   
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+        
+
+        <script type="text/javascript" >
+
+        $(document).ready(function(){
+
+            $(".example").TimeCircles({circle_bg_color: "#000000",time: {
+    Days: { color: "#FFD700" },
+    Hours: { color: "#FFD700" },
+    Minutes: { color: "#FFD700" },
+    Seconds: { color: "#FFD700" }
+    },animation: "smooth"}); 
+        })
+
+            var messagesRef = new Firebase('https://ic3cubes-db.firebaseio.com/');
+
+                   function postinquiry(e) {
+                     e.preventDefault();
+                   console.log('sadfasdfvalue');
+                    console.log(document.getElementById("name").value);
+        
+                    if(document.getElementById("name").value !== "" &&  document.getElementById("email").value !== "" &&  document.getElementById("message").value !== ""){
+                        var data ={
+                        name: document.getElementById("name").value,
+                        email: document.getElementById("email").value,
+                        message: document.getElementById("message").value,
+                        }
+                        messagesRef.push(data, function(error) {
+                         if (error){
+                            document.getElementById("message13").style.display = "block";
+                            console.log('Error has occured during saving process');
+                            document.getElementById("name").value='';
+                            document.getElementById("email").value='';
+                            document.getElementById("message").value='';
+
+                        /// $('#ErrormyModal').modal('show');
+                         }else{
+
+                        //  $(document).ready(function() {
+                        //        $("#myModal").modal('show');
+                        //  });
+                        //  $('#myModal').modal('show');
+                        document.getElementById("message12").style.display = "block";
+                        
+                            document.getElementById("name").value='';
+                            document.getElementById("email").value='';
+                            document.getElementById("message").value='';
+                            console.log("Data hss been saved succesfully");
+                         }
+                         
+                    })
+                    } else{
+                        document.getElementById("message14").style.display = "block";
+                            console.log('Validation Error');
+                        //$('#ValidationModal').modal('show');
+                    }
+        
+                    }
+                    function resetForm(){
+                        document.getElementById("message14").style.display = "none";
+                        document.getElementById("message13").style.display = "none";
+                        document.getElementById("message12").style.display = "none";
+
+                    }
+
+        </script>
+
+
+    </head>
+    
+
+    <body data-spy="scroll" data-target=".inner-link" data-offset="60">
+        <main>
+            <div class="znav-container znav-white znav-fixed border-bottom-nav color-10" id="znav-container">
+                <div class="container">
+                    <nav class="navbar navbar-toggleable-md">
+                        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <div class="hamburger hamburger--emphatic">
+                                <div class="hamburger-box">
+                                    <div class="hamburger-inner"></div>
+                                </div>
+                            </div>
+                        </button>
+                        <a class="navbar-brand overflow-hidden" href="index.html">
+                            <img src='assets/images/logo.png' alt='logo' width='60px'>
+                        </a>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            
+
+                            <ul class="navbar-nav ml-auto">
+
+
+                            <li>
+                                <a href="JavaScript:void(0)">ABOUT</a>
+                                <ul class="dropdown dropdown-push-left">
+                                                <li>
+                                                    <a href="page-about-company.html">Company</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="page-about-team.html">Team</a>
+                                                </li>
+                                                
+                                                <li>
+                                                    <a href="page-careers.html">Careers</a>
+                                                </li>
+                                                  
+                                     </ul>
+                            </li>    
+
+
+                            <li>
+                                <a href="JavaScript:void(0)">TECHNOLOGY</a>
+                                <ul class="dropdown dropdown-push-left">    
+
+                                                <li>
+                                                    <a href="custom-software-development.html">Custom Software</a>
+                                                </li>
+
+
+
+                                                <li>
+                                                    <a href="mobile-app-development.html">Mobile Apps</a>
+                                                </li> 
+
+
+
+
+                                                <li>
+                                                    <a href="blockchain-development.html">Blockchain</a>
+                                                </li>   
+
+
+
+
+                                                <li>
+                                                    <a href="dedicated-software-development-teams.html">Dedicated Teams</a>
+                                                </li>
+
+                                                
+
+                                                <li>
+                                                    <a href="new-project-startups.html">New Business</a>
+                                                </li>
+
+
+                                      </ul>
+                            </li>
+
+                            <li>
+                                <a href="JavaScript:void(0)">EXPERTISE</a>
+                                <ul class="dropdown dropdown-push-left">    
+                                                <li>
+                                                    <a href="page-about-company.html">FinTech</a>
+                                                </li>   
+
+
+                                                <li>
+                                                    <a href="page-about-company.html">FoodTech</a>
+                                                </li> 
+
+
+                                                <li>
+                                                    <a href="page-about-company.html">ERP</a>
+                                                </li>
+
+
+                                                <li>
+                                                    <a href="page-about-company.html">CustomWeb</a>
+                                                </li>
+                                      </ul>
+                            </li>   
+
+
+
+                               <a class="btn btn-outline-black btn-xs text-uppercase ls ml-3" href="https://docs.google.com/forms/d/e/1FAIpQLSdKapEbHiPcEfMa4lKr9gxjj-vEjSVRdtnROxvWzJ1nK_vEGw/viewform?usp=sf_link" target="_blank" style="margin-top: 5px;">Contact Us</a>
+                                
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <!-- /.container-->
+            </div>
+            <!-- /.znav-container-->
+
+
+
+
+            <section class="has-parallax color-white font-1 py-0">
+                <div class="background-holder overlay overlay-gradient parallax h-100vh" style="background-image:url(assets/images/software.jpg);" data-rellax-speed="-10"> </div>
+                <!--/.background-holder-->
+                <div class="container">
+                    <div class="row align-items-end h-full">
+                        <div class="col-xl-12 pb-10">
+                            <h1 class="fw-500 fs-3 fs-sm-4">Custom Software Development</h1>
+                            <p class="lead">No matter what your business lifecycle, we make it simple and cost effective.</p>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+
+            <section class="font-1 py-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center pt-10">
+                            <h4 class="ls text-uppercase mb-4">One Stop Development Shop</h4>
+                            <h2 class="fw-400">
+                                <span class="color-primary">
+                                    <br class="hidden-sm-up">
+                                    <span class="typed-text fw-400" data-typed-text='["Enterprise Software", "Multiplatform Development", "Cloud Servers", "On-Going Support", "International Teams", "Diverse Experience"]'></span>
+                                </span>
+                            </h2>
+                            
+                            <h4 class="mt-8 color-3">We've got dedicated development teams that generate results <br> unmatched by single freelancers or small teams.</h4>
+                       
+                     
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+             <section>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <img src="assets/images/IMG_9382.PNG">
+                        </div>
+                        <div class="col-md-6 font-1">
+                            <div class="p-1 p-lg-1">
+                                <h4 class="fw-400 mb-4">Agile Development,<br>International Expertise.</h4>
+                                <p class="color-7 lead font-1">The skills needed to complete a project are very diverse including: system architecture, front-end development, back-end development, mobile app development, quality assurance, project management, business analysis, graphic design, and more! Instead of looking for one person that knows it all, This is G brings together highly skilled and specialized people to deliver quality products on time and budget.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+
+             <section class="p-0">
+                <div class="container-fluid">
+                    <div class="row align-itmes-center align-itmes-stretch">
+                        <div class="col-xl-4 hidden-lg-down">
+                            <div class="background-holder" style="background-image:url(assets/images/digital-agency-testimonial.jpg);"> </div>
+                            <!--/.background-holder-->
+                        </div>
+                        <div class="col-xl-4 col-lg-6 background-2 color-white px-0">
+                            <img class="mx-0 my-0" src="assets/images/book.jpg">
+                            <div class="px-4 py-7 col-10 offset-1">
+                                <p class="color-9 fs-2 font-italic pb-5">"Anything you can imagine can be developed. Things are only getting faster and it is our job to evolve with the industry. We absolutely love technology and staying at the forefront is something we are going to do regardless. "</p>
+                                <hr class="short left color-4" align="left">
+                                <h5 class="color-9 fw-400">Matt Guignard, Managing Partner</h5>
+                                </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 text-center background-1">
+                            <div class="row align-items-center py-5 py-lg-8">
+                                <div class="col">
+                                    <h6 class="fs-0 color-8 text-uppercase">Mean Stack</h6>
+                                    <hr class="short color-4 mb-6">
+                                    <img class="d-block px-5 mb-5" src="assets/images/icons/aws.png">
+                                    <img class="d-block px-5 mb-5" src="assets/images/icons/mongo.png">
+                                    <img class="d-block px-5 mb-5" src="assets/images/icons/express.png">
+                                    <img class="d-block px-5 mb-5" src="assets/images/icons/angular.png">
+                                    <img class="d-block px-5 mb-5" src="assets/images/icons/node.png">
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+          
+            <section class="pb-5">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10 col-xl-9 text-center">
+                            <h1 class="fs-3 mb-4 fw-400">Masters of Development </h1>
+                            <p class="color-7 lead font-1 mb-6">Our team is able to specialize and master programming skills in Microsoft .Net, Node JS, PHP, Java, Python, Perl, C++, iOS, Android, AngularJS, ReactJS, Ionic, HTML 5, Bootstram 4 and more</p>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+       
+            <section class="text-center mb-7 font-1">
+                <div class="container mb-5">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <h4 class="fw-400">Ready to start your project?</h4>
+                            <p class="lead color-5 mb-5">Connect with us to discuss your project, within a few moments we will have enough insight to provide genuine direction.</p>
+                            <a class="btn btn-primary text-uppercase ls" href="#">Explore Now</a>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+
+
+
+            <footer class="background-1 color-8 py-3 fs--1 fw-600 font-heading">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-auto font-1">&copy; 2017 This is G Inc. </div>
+                        <div class="col fs-0 text-right">
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-behance"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-dribbble"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
+       </main>
+        <!--  -->
+        <!--    JavaScripts-->
+        <!--    =============================================-->
+        <script src="assets/lib/jquery/dist/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+        <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
+        <script src="assets/lib/rellax/rellax.js"></script>
+        <script src="assets/lib/typed.js/dist/typed.min.js"></script>
+        <script src="assets/lib/isotope/dist/isotope.pkgd.js"></script>
+        <script src="assets/js/googlemap.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoK8GIrOHzHwnzHCyqrdtmTpUWcdrTTD8&callback=initMap"></script>
+        <script src="assets/lib/prism/prism.js"></script>
+        <script src="assets/lib/semantic-ui-accordion/accordion.js"></script>
+        <script src="assets/lib/semantic-ui-transition/transition.js"></script>
+        <script src="assets/js/core.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
