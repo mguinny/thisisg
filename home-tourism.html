@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--  -->
+        <!--    Document Title-->
+        <!-- =============================================-->
+        <title>Full Suite Technology Company. Blockchain, Mobile and Web Digital Solutions | This is G</title>
+        <!--  -->
+        <!--    Favicons-->
+        <!--    =============================================-->
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!--  -->
+        <!--    Stylesheets-->
+        <!--    =============================================-->
+        <!-- Default stylesheets-->
+        <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Template specific stylesheets-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i" rel="stylesheet">
+        <link href="assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/lib/iconsmind/iconsmind.css" rel="stylesheet">
+        <link href="assets/lib/css-hamburgers/dist/hamburgers.css" rel="stylesheet">
+        <link href="assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+        <link href="assets/lib/remodal/dist/remodal.css" rel="stylesheet">
+        <link href="assets/lib/remodal/dist/remodal-default-theme.css" rel="stylesheet">
+        <link href="assets/lib/prism/prism.css" rel="stylesheet">
+        <link href="assets/lib/semantic-ui-accordion/accordion.css" rel="stylesheet">
+        <link href="assets/lib/semantic-ui-transition/transition.css" rel="stylesheet">
+        <link href="assets/lib/flexslider/flexslider.css" rel="stylesheet">
+        <link href="assets/lib/semantic-ui-dropdown/dropdown.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="animate.min.css">
+
+
+
+        <!-- Main stylesheet and color file-->
+        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/custom.css" rel="stylesheet"> 
+
+        <link rel="shortcut icon" href="24.ico" type="image/x-icon">
+        
+        <meta name="description" content="This is G - A Full Suite Technology Company. Blockchain, Mobile and Web Development, Cloud Computing, Digital Marketing, Branding and Content Creation. Digital Solution from an International Tech Company."/>
+
+        <meta name="keywords" content="Full Stack, Full Suite, G Suite, Blockchain, Blockchain Solutions, Blockchain Development, Mobile Development, Mobile Applications, Mobile App, Mobile Solutions, Techology, Technology Company, Technology Solutions, Technology Development. Toronto, Montreal, London, Windsor Ontario, Detroit Michigan". /-->
+
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107350529-1"></script>
+        
+        <script>
+                 window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments)};
+                gtag('js', new Date());
+
+                gtag('config', 'UA-107350529-1');
+        </script>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/TimeCircles.js"></script>
+        <link href="assets/css/TimeCircles.css" rel="stylesheet">   
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+        
+
+        <script type="text/javascript" >
+
+        $(document).ready(function(){
+
+            $(".example").TimeCircles({circle_bg_color: "#000000",time: {
+    Days: { color: "#FFD700" },
+    Hours: { color: "#FFD700" },
+    Minutes: { color: "#FFD700" },
+    Seconds: { color: "#FFD700" }
+    },animation: "smooth"}); 
+        })
+
+            var messagesRef = new Firebase('https://ic3cubes-db.firebaseio.com/');
+
+                   function postinquiry(e) {
+                     e.preventDefault();
+                   console.log('sadfasdfvalue');
+                    console.log(document.getElementById("name").value);
+        
+                    if(document.getElementById("name").value !== "" &&  document.getElementById("email").value !== "" &&  document.getElementById("message").value !== ""){
+                        var data ={
+                        name: document.getElementById("name").value,
+                        email: document.getElementById("email").value,
+                        message: document.getElementById("message").value,
+                        }
+                        messagesRef.push(data, function(error) {
+                         if (error){
+                            document.getElementById("message13").style.display = "block";
+                            console.log('Error has occured during saving process');
+                            document.getElementById("name").value='';
+                            document.getElementById("email").value='';
+                            document.getElementById("message").value='';
+
+                        /// $('#ErrormyModal').modal('show');
+                         }else{
+
+                        //  $(document).ready(function() {
+                        //        $("#myModal").modal('show');
+                        //  });
+                        //  $('#myModal').modal('show');
+                        document.getElementById("message12").style.display = "block";
+                        
+                            document.getElementById("name").value='';
+                            document.getElementById("email").value='';
+                            document.getElementById("message").value='';
+                            console.log("Data hss been saved succesfully");
+                         }
+                         
+                    })
+                    } else{
+                        document.getElementById("message14").style.display = "block";
+                            console.log('Validation Error');
+                        //$('#ValidationModal').modal('show');
+                    }
+        
+                    }
+                    function resetForm(){
+                        document.getElementById("message14").style.display = "none";
+                        document.getElementById("message13").style.display = "none";
+                        document.getElementById("message12").style.display = "none";
+
+                    }
+
+        </script>
+
+
+    </head>
+    
+
+    <body data-spy="scroll" data-target=".inner-link" data-offset="60">
+        <main>
+            <div class="znav-container znav-white znav-fixed border-bottom-nav color-10" id="znav-container">
+                <div class="container">
+                    <nav class="navbar navbar-toggleable-md">
+                        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <div class="hamburger hamburger--emphatic">
+                                <div class="hamburger-box">
+                                    <div class="hamburger-inner"></div>
+                                </div>
+                            </div>
+                        </button>
+                        <a class="navbar-brand overflow-hidden" href="index.html">
+                            <img src='assets/images/logo.png' alt='logo' width='60px'>
+                        </a>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            
+
+                            <ul class="navbar-nav ml-auto">
+
+
+                            <li>
+                                <a href="JavaScript:void(0)">ABOUT</a>
+                                <ul class="dropdown dropdown-push-left">
+                                                <li>
+                                                    <a href="page-about-company.html">Company</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="page-about-team.html">Team</a>
+                                                </li>
+                                                
+                                                <li>
+                                                    <a href="page-careers.html">Careers</a>
+                                                </li>
+                                                  
+                                     </ul>
+                            </li>    
+
+
+                            <li>
+                                <a href="JavaScript:void(0)">TECHNOLOGY</a>
+                                <ul class="dropdown dropdown-push-left">    
+
+                                                <li>
+                                                    <a href="custom-software-development.html">Custom Software</a>
+                                                </li>
+
+
+
+                                                <li>
+                                                    <a href="mobile-app-development.html">Mobile Apps</a>
+                                                </li> 
+
+
+
+
+                                                <li>
+                                                    <a href="blockchain-development.html">Blockchain</a>
+                                                </li>   
+
+
+
+
+                                                <li>
+                                                    <a href="dedicated-software-development-teams.html">Dedicated Teams</a>
+                                                </li>
+
+                                                
+
+                                                <li>
+                                                    <a href="new-project-startups.html">New Business</a>
+                                                </li>
+
+
+                                      </ul>
+                            </li>
+
+                            <li>
+                                <a href="JavaScript:void(0)">CLIENTS</a>
+                                <ul class="dropdown dropdown-push-left">    
+                                                <li>
+                                                    <a href="page-portfolio.html">Portfolio</a>
+                                                </li>   
+
+
+                                                <li>
+                                                    <a href="page-examples.html">Examples</a>
+                                                </li> 
+
+                                      </ul>
+                            </li>   
+
+
+
+                               <a class="btn btn-outline-black btn-xs text-uppercase ls ml-3" href="https://docs.google.com/forms/d/e/1FAIpQLSdKapEbHiPcEfMa4lKr9gxjj-vEjSVRdtnROxvWzJ1nK_vEGw/viewform?usp=sf_link" target="_blank" style="margin-top: 5px;">Contact Us</a>
+                                
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <!-- /.container-->
+            </div>
+            <!-- /.znav-container-->
+
+
+
+
+            <section class="color-white text-center p-0" id="header-video">
+                <div class="background-holder overlay" style="background-image:url(assets/images/tarvel-header.jpg);">
+                    <div class="youtube-background" data-video-url="https://youtu.be/rvegc9iw0Yw" data-start-at="2" data-stop-at="27" data-quality="hd720"></div>
+                </div>
+                <!--/.background-holder-->
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 align-self-center py-11">
+                            <h1 class="fs-3 fs-md-4 mb-5 fw-300">Jump into
+                                <span class="fw-600">Ireland</span>
+                            </h1>
+                            <a class="video-modal d-block pb-2" href="https://www.youtube.com/watch?v=c8aFcHFu8QM" data-start="16" data-end="168">
+                                <img src="assets/images/icons/icon-play.svg" width="80">
+                            </a>
+                            <h6 class="fs-0 font-1 lh-2 m-0">Live in the Now</h6>
+                        </div>
+                        <div class="col-12 align-self-bottom background-1">
+                            <div class="text-center lead color-9 py-4 font-italic fs-2">Explore our warm welcoming island and become part of it</div>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section class="py-0">
+                <div class="container">
+                    <div class="row no-gutter">
+                        <a class="color-11 col-md-6 pt-11 px-4" href="#">
+                            <div class="background-holder overlay overlay-gradient" style="background-image:url(assets/images/travel-01.jpg);"> </div>
+                            <!--/.background-holder-->
+                            <span class="badge badge-default mb-2 text-uppercase py-2 px-3 ls">Wild Atlantic Way</span>
+                            <h4 class="mb-0 pb-4">A wild and rugged journey</h4>
+                        </a>
+                        <a class="color-11 col-md-6 pt-11 px-4" href="#">
+                            <div class="background-holder overlay overlay-gradient" style="background-image:url(assets/images/travel-02.jpg);"> </div>
+                            <!--/.background-holder-->
+                            <span class="badge badge-default mb-2 text-uppercase py-2 px-3 ls">Northern Ireland</span>
+                            <h4 class="mb-0 pb-4">Get ready for an adventure</h4>
+                        </a>
+                        <a class="color-11 col-md-6 pt-11 px-4" href="#">
+                            <div class="background-holder overlay overlay-gradient" style="background-image:url(assets/images/travel-04.jpg);"> </div>
+                            <!--/.background-holder-->
+                            <span class="badge badge-default mb-2 text-uppercase py-2 px-3 ls">Dublin</span>
+                            <h4 class="mb-0 pb-4">Experience the unexpected</h4>
+                        </a>
+                        <a class="color-11 col-md-6 pt-11 px-4" href="#">
+                            <div class="background-holder overlay overlay-gradient" style="background-image:url(assets/images/travel-03.jpg);"> </div>
+                            <!--/.background-holder-->
+                            <span class="badge badge-default mb-2 text-uppercase py-2 px-3 ls">Ireland’s Ancient East</span>
+                            <h4 class="mb-0 pb-4">Centuries of ancient stories</h4>
+                        </a>
+                        <div class="col-12 mt-5 text-center">
+                            <a class="btn btn-link fs-0" href="#">View All &xrarr;</a>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section class="py-8 text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 col-md-3 mb-5 mb-md-0">
+                            <span class="icon-Mail-3 fs-6 color-4"></span>
+                            <h5 class="mt-3">Future Updates</h5>
+                            <p class="color-5 font-1">Directly to your inbox</p>
+                        </div>
+                        <div class="col-6 col-md-3 mb-5 mb-md-0">
+                            <span class="icon-Air-Balloon fs-6 color-4"></span>
+                            <h5 class="mt-3">Modular Codes</h5>
+                            <p class="color-5 font-1">Use any section everywhere</p>
+                        </div>
+                        <div class="col-6 col-md-3 mb-5 mb-md-0">
+                            <span class="icon-Bacteria fs-6 color-4"></span>
+                            <h5 class="mt-3">Easy Documentation</h5>
+                            <p class="color-5 font-1">For effortless customization</p>
+                        </div>
+                        <div class="col-6 col-md-3 mb-5 mb-md-0">
+                            <span class="icon-Fingerprint-2 fs-6 color-4"></span>
+                            <h5 class="mt-3">Dedicated Support</h5>
+                            <p class="color-5 font-1">Whenever you need it</p>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section class="has-parallax py-11 color-white">
+                <div class="background-holder overlay parallax" style="background-image:url(assets/images/generic-01.jpg);" data-rellax-speed="-10"> </div>
+                <!--/.background-holder-->
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5 col-md-6">
+                            <h5 class="mb-3">Explore Posh</h5>
+                            <p class="lead font-italic">From a simple hyperlink to the contact form, Posh is packed with so many elements and features to do more. </p>
+                            <a class="btn btn-link pl-0 fs-0 color-white" href="#">Start exploring &xrarr;</a>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section class="py-8">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <div class="card mb-5 mb-md-0">
+                                <a class="overflow-hidden" href="#">
+                                    <img class="card-img-top w-100" src="assets/images/blog-02.jpg" alt="Card image cap">
+                                </a>
+                                <div class="card-block p-4">
+                                    <a class="color-black" href="#">
+                                        <h6 class="mb-2 card-title">Luxury Apartment - Tribeca</h6>
+                                    </a>
+                                    <p class="font-1 fs--1 color-5">4 Nights &middot; 2 Guests</p>
+                                    <a class="fs--1 font-1 fw-600" href="#">View Experience</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="card mb-5 mb-md-0">
+                                <a class="overflow-hidden" href="#">
+                                    <img class="card-img-top w-100" src="assets/images/blog-05.jpg" alt="Card image cap">
+                                </a>
+                                <div class="card-block p-4">
+                                    <a class="color-black" href="#">
+                                        <h6 class="mb-2 card-title">Hyatt Zilara Cancun Escape</h6>
+                                    </a>
+                                    <p class="font-1 fs--1 color-5">3 Nights &middot; 2 - 7 Guests</p>
+                                    <a class="fs--1 font-1 fw-600" href="#">View Experience</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="card">
+                                <a class="overflow-hidden" href="#">
+                                    <img class="card-img-top w-100" src="assets/images/blog-10.jpg" alt="Card image cap">
+                                </a>
+                                <div class="card-block p-4">
+                                    <a class="color-black" href="#">
+                                        <h6 class="mb-2 card-title">Wailea Beach Resort</h6>
+                                    </a>
+                                    <p class="font-1 fs--1 color-5">4 Nights &middot; 10 Guests</p>
+                                    <a class="fs--1 font-1 fw-600" href="#">View Experience</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+            <section class="py-8 background-11 text-center overflow-hidden">
+                <div class="container">
+                    <h3 class="fw-300 color-1 mb-0">Create Travel Website
+                        <span class="typed-text fw-600" data-typed-text='["effortlessly.","stunningly."]'></span>
+                    </h3>
+                    <p class="lead color-5 font-1">Make unique design for travel websites from 174 premade layouts</p>
+                    <form class="color-3 row mt-5">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="form-group">
+                                <input class="form-control mb-2 mr-sm-2 mb-sm-0 w-100 px-5 fw-600 background-white" type="text" placeholder="Destination"> </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="form-group">
+                                <input class="form-control mb-2 mr-sm-2 mb-sm-0 w-100 px-5 fw-600 background-white" type="text" placeholder="Location"> </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="form-group">
+                                <div class="ui selection dropdown w-100">
+                                    <input type="hidden" name="catagories ">
+                                    <i class="dropdown icon"></i>
+                                    <div class="text">Any Package</div>
+                                    <div class="menu">
+                                        <div class="item">Honeymoon</div>
+                                        <div class="item">Family</div>
+                                        <div class="item">Exotic</div>
+                                        <div class="item">Adult only</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <button class="btn btn-primary w-100" type="submit">Submit</button>
+                        </div>
+                    </form>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+            
+            <footer class="background-1 color-8 py-3 fs--1 fw-600 font-heading">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-auto font-1">&copy; 2018 This is G Inc. </div>
+                        <div class="col fs-0 text-right">
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-behance"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-dribbble"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
+
+        </main>
+        <!--  -->
+        <!--    JavaScripts-->
+        <!--    =============================================-->
+        <script src="assets/lib/jquery/dist/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+        <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
+        <script src="assets/lib/rellax/rellax.js"></script>
+        <script src="assets/lib/typed.js/dist/typed.min.js"></script>
+        <script src="assets/lib/isotope/dist/isotope.pkgd.js"></script>
+        <script src="assets/js/googlemap.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoK8GIrOHzHwnzHCyqrdtmTpUWcdrTTD8&callback=initMap"></script>
+        <script src="assets/lib/prism/prism.js"></script>
+        <script src="assets/lib/semantic-ui-accordion/accordion.js"></script>
+        <script src="assets/lib/semantic-ui-transition/transition.js"></script>
+        <script src="assets/lib/flexslider/jquery.flexslider.js"></script>
+
+        <script src="assets/lib/remodal/dist/remodal.js"></script>
+        <script src="assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>
+        <script src="assets/lib/semantic-ui-dropdown/dropdown.js"></script>
+        
+        <script src="assets/js/core.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

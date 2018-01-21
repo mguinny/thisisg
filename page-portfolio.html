@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--  -->
+        <!--    Document Title-->
+        <!-- =============================================-->
+        <title>Full Suite Technology Company. Blockchain, Mobile and Web Digital Solutions</title>
+        <!--  -->
+        <!--    Favicons-->
+        <!--    =============================================-->
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!--  -->
+        <!--    Stylesheets-->
+        <!--    =============================================-->
+        <!-- Default stylesheets-->
+        <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Template specific stylesheets-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i" rel="stylesheet">
+        <link href="assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/lib/iconsmind/iconsmind.css" rel="stylesheet">
+        <link href="assets/lib/css-hamburgers/dist/hamburgers.css" rel="stylesheet">
+        <link href="assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+        <link href="assets/lib/remodal/dist/remodal.css" rel="stylesheet">
+        <link href="assets/lib/remodal/dist/remodal-default-theme.css" rel="stylesheet">
+        <link href="assets/lib/prism/prism.css" rel="stylesheet">
+        <link href="assets/lib/semantic-ui-accordion/accordion.css" rel="stylesheet">
+        <link href="assets/lib/semantic-ui-transition/transition.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="animate.min.css">
+
+
+
+        <!-- Main stylesheet and color file-->
+        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/custom.css" rel="stylesheet"> 
+
+        <link rel="shortcut icon" href="24.ico" type="image/x-icon">
+        
+        <meta name="description" content="This is G - A Full Suite Technology Company. Blockchain, Mobile and Web Development, Cloud Computing, Digital Marketing, Branding and Content Creation. Digital Solution from an International Tech Company."/>
+
+        <meta name="keywords" content="Full Stack, Full Suite, G Suite, Blockchain, Blockchain Solutions, Blockchain Development, Mobile Development, Mobile Applications, Mobile App, Mobile Solutions, Techology, Technology Company, Technology Solutions, Technology Development. Toronto, Montreal, London, Windsor Ontario, Detroit Michigan". /-->
+
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107350529-1"></script>
+        
+        <script>
+                 window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments)};
+                gtag('js', new Date());
+
+                gtag('config', 'UA-107350529-1');
+        </script>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/TimeCircles.js"></script>
+        <link href="assets/css/TimeCircles.css" rel="stylesheet">   
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+        
+
+        <script type="text/javascript" >
+
+        $(document).ready(function(){
+
+            $(".example").TimeCircles({circle_bg_color: "#000000",time: {
+    Days: { color: "#FFD700" },
+    Hours: { color: "#FFD700" },
+    Minutes: { color: "#FFD700" },
+    Seconds: { color: "#FFD700" }
+    },animation: "smooth"}); 
+        })
+
+            var messagesRef = new Firebase('https://ic3cubes-db.firebaseio.com/');
+
+                   function postinquiry(e) {
+                     e.preventDefault();
+                   console.log('sadfasdfvalue');
+                    console.log(document.getElementById("name").value);
+        
+                    if(document.getElementById("name").value !== "" &&  document.getElementById("email").value !== "" &&  document.getElementById("message").value !== ""){
+                        var data ={
+                        name: document.getElementById("name").value,
+                        email: document.getElementById("email").value,
+                        message: document.getElementById("message").value,
+                        }
+                        messagesRef.push(data, function(error) {
+                         if (error){
+                            document.getElementById("message13").style.display = "block";
+                            console.log('Error has occured during saving process');
+                            document.getElementById("name").value='';
+                            document.getElementById("email").value='';
+                            document.getElementById("message").value='';
+
+                        /// $('#ErrormyModal').modal('show');
+                         }else{
+
+                        //  $(document).ready(function() {
+                        //        $("#myModal").modal('show');
+                        //  });
+                        //  $('#myModal').modal('show');
+                        document.getElementById("message12").style.display = "block";
+                        
+                            document.getElementById("name").value='';
+                            document.getElementById("email").value='';
+                            document.getElementById("message").value='';
+                            console.log("Data hss been saved succesfully");
+                         }
+                         
+                    })
+                    } else{
+                        document.getElementById("message14").style.display = "block";
+                            console.log('Validation Error');
+                        //$('#ValidationModal').modal('show');
+                    }
+        
+                    }
+                    function resetForm(){
+                        document.getElementById("message14").style.display = "none";
+                        document.getElementById("message13").style.display = "none";
+                        document.getElementById("message12").style.display = "none";
+
+                    }
+
+        </script>
+
+
+    </head>
+    
+
+    <body data-spy="scroll" data-target=".inner-link" data-offset="60">
+        <main>
+            <div class="znav-container znav-white znav-fixed border-bottom-nav color-10" id="znav-container">
+                <div class="container">
+                    <nav class="navbar navbar-toggleable-md">
+                        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <div class="hamburger hamburger--emphatic">
+                                <div class="hamburger-box">
+                                    <div class="hamburger-inner"></div>
+                                </div>
+                            </div>
+                        </button>
+                        <a class="navbar-brand overflow-hidden" href="index.html">
+                            <img src='assets/images/logo.png' alt='logo' width='60px'>
+                        </a>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            
+
+                            <ul class="navbar-nav ml-auto">
+
+
+                            <li>
+                                <a href="JavaScript:void(0)">ABOUT</a>
+                                <ul class="dropdown dropdown-push-left">
+                                                <li>
+                                                    <a href="page-about-company.html">Company</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="page-about-team.html">Team</a>
+                                                </li>
+                                                
+                                                <li>
+                                                    <a href="page-careers.html">Careers</a>
+                                                </li>
+                                                  
+                                     </ul>
+                            </li>    
+
+
+                            <li>
+                                <a href="JavaScript:void(0)">TECHNOLOGY</a>
+                                <ul class="dropdown dropdown-push-left">    
+
+                                                <li>
+                                                    <a href="custom-software-development.html">Custom Software</a>
+                                                </li>
+
+
+
+                                                <li>
+                                                    <a href="mobile-app-development.html">Mobile Apps</a>
+                                                </li> 
+
+
+
+
+                                                <li>
+                                                    <a href="blockchain-development.html">Blockchain</a>
+                                                </li>   
+
+
+
+
+                                                <li>
+                                                    <a href="dedicated-software-development-teams.html">Dedicated Teams</a>
+                                                </li>
+
+                                                
+
+                                                <li>
+                                                    <a href="new-project-startups.html">New Business</a>
+                                                </li>
+
+
+                                      </ul>
+                            </li>
+
+                            <li>
+                                <a href="JavaScript:void(0)">CLIENTS</a>
+                                <ul class="dropdown dropdown-push-left">    
+                                                <li>
+                                                    <a href="page-portfolio.html">Portfolio</a>
+                                                </li>   
+
+
+                                                <li>
+                                                    <a href="page-examples.html">Examples</a>
+                                                </li> 
+
+                                      </ul>
+                            </li>   
+
+
+
+                               <a class="btn btn-outline-black btn-xs text-uppercase ls ml-3" href="https://docs.google.com/forms/d/e/1FAIpQLSdKapEbHiPcEfMa4lKr9gxjj-vEjSVRdtnROxvWzJ1nK_vEGw/viewform?usp=sf_link" target="_blank" style="margin-top: 5px;">Contact Us</a>
+                                
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <!-- /.container-->
+            </div>
+            <!-- /.znav-container-->
+
+
+
+
+            
+            <section class="p-0 color-white font-1">
+                <div class="background-holder overlay overlay-1" style="background-image:url(assets/images/IMG_9396.JPG);"> </div>
+                <!--/.background-holder-->
+                <div class="container">
+                    <div class="row color-white">
+                        <div class="col-md-8 py-10">
+                            <h4 class="text-uppercase ls">Dedicated Teams</h4>
+                            <h2 class="fs-4">Scale your Business with a Long-Term Business Partner</h2>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+
+
+            <section class="background-0 font-1 pb-8">
+                <div class="container">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-md-9 mt-4">
+                            <p class="font-1 fs-2 fw-300 color-5">This is G is a software outsourcing company that helps businesses manage complex, long-term software projects by providing dedicated teams and services. We are a one-stop provider of full-cycle software development, equipped to handle the end-to-end delivery of mid- to large-scale projects that span multiple technologies and disciplines. </p>
+                          </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+
+
+             <section class="pb-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="hoverbox p-3 pt-11 h-100">
+                                <div class="background-holder overlay overlay-gradient" style="background-image:url(assets/images/hotel-blog-01.jpg);"> </div>
+                                <!--/.background-holder-->
+                                <div class="row h-100 hover-box-content-initial align-items-end">
+                                    <div class="col mt-8">
+                                        <h5 class="color-white text-uppercase fw-400 mb-0">100+ Layouts</h5>
+                                    </div>
+                                </div>
+                                <div class="hoverbox-content row align-items-center color-white text-center">
+                                    <div class="background-holder overlay overlay-0" style="background-image:url(undefined);"> </div>
+                                    <!--/.background-holder-->
+                                    <div class="col-sm-12 p-5">
+                                        <h4 class="mb-2">100+ Layouts</h4>
+                                        <p class="d-inline-block font-1">2088 Premium icons and enormous features</p>
+                                        <a class="btn btn-warning btn-sm" href="#">Know more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="hoverbox p-3 pt-11 h-100">
+                                <div class="background-holder overlay overlay-gradient" style="background-image:url(assets/images/hotel-blog-02.jpg);"> </div>
+                                <!--/.background-holder-->
+                                <div class="row h-100 hover-box-content-initial align-items-end">
+                                    <div class="col mt-8">
+                                        <h5 class="color-white text-uppercase fw-400 mb-0">Retina Ready</h5>
+                                    </div>
+                                </div>
+                                <div class="hoverbox-content row align-items-center color-white text-center">
+                                    <div class="background-holder overlay overlay-0" style="background-image:url(undefined);"> </div>
+                                    <!--/.background-holder-->
+                                    <div class="col-sm-12 p-5">
+                                        <h4 class="mb-2">Retina Ready</h4>
+                                        <p class="d-inline-block font-1">Pixel perfect and responsive to every screen</p>
+                                        <a class="btn btn-warning btn-sm" href="#">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="hoverbox p-3 pt-11 h-100">
+                                <div class="background-holder overlay overlay-gradient" style="background-image:url(assets/images/hotel-blog-03.jpg);"> </div>
+                                <!--/.background-holder-->
+                                <div class="row h-100 hover-box-content-initial align-items-end">
+                                    <div class="col mt-8">
+                                        <h5 class="color-white text-uppercase fw-400 mb-0">Bootstrap 4x</h5>
+                                    </div>
+                                </div>
+                                <div class="hoverbox-content row align-items-center color-white text-center">
+                                    <div class="background-holder overlay overlay-0" style="background-image:url(undefined);"> </div>
+                                    <!--/.background-holder-->
+                                    <div class="col-sm-12 p-5">
+                                        <h4 class="mb-2">Bootstrap 4x</h4>
+                                        <p class="d-inline-block font-1">Made to do more together with Bootstrap</p>
+                                        <a class="btn btn-warning btn-sm" href="#">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4 align-self-stretch push-lg-8">
+                            <div class="hoverbox p-3 pt-11 h-100">
+                                <div class="background-holder overlay overlay-gradient" style="background-image:url(assets/images/hotel-blog-05.jpg);"> </div>
+                                <!--/.background-holder-->
+                                <div class="row h-100 hover-box-content-initial align-items-end">
+                                    <div class="col mt-8">
+                                        <h5 class="color-white text-uppercase fw-400 mb-0">Detailed Docs</h5>
+                                    </div>
+                                </div>
+                                <div class="hoverbox-content row align-items-center color-white text-center">
+                                    <div class="background-holder overlay overlay-0" style="background-image:url(undefined);"> </div>
+                                    <!--/.background-holder-->
+                                    <div class="col-sm-12 p-5">
+                                        <h4 class="mb-2">Detailed Documentation</h4>
+                                        <p class="d-inline-block font-1">Well commented and properly indented code</p>
+                                        <a class="btn btn-warning btn-sm" href="#">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 mb-4 pull-lg-4">
+                            <section class="p-3 pt-11 h-100 color-white">
+                                <div class="background-holder overlay overlay-gradient" style="background-image:url(assets/images/hotel-blog-04.jpg);"> </div>
+                                <!--/.background-holder-->
+                                <div>
+                                    <div class="row h-100 align-items-end">
+                                        <div class="col">
+                                            <h4 class="mb-0 mt-4"> Featured Accomodation</h4>
+                                            <p class="d-inline-block font-1">Experience the Awesomeness with Posh</p>
+                                            <br>
+                                            <a class="btn btn-warning btn-sm" href="#">View details</a>
+                                        </div>
+                                    </div>
+                                    <!--/.row-->
+                                </div>
+                                <!--/.container-->
+                            </section>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+
+            <section class="font-1 color-white py-0">
+                <div class="background-holder overlay" style="background-image:url(assets/images/block5.JPG);"> </div>
+                <!--/.background-holder-->
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col text-center py-8 push-lg-6">
+                            <a class="video-modal mb-3 d-inline-block" href="https://www.IC3Cubes.com" target="_blank">
+                                <img src="assets/images/icon-play.svg" width="80">
+                            </a>
+                        </div>
+                        <div class="col-lg-6 background-1 px-3 px-lg-8 py-11 pull-lg-6">
+                            <h4 class="fw-400">Blockchain</h4>
+                            <p class="lead color-9">IC3 Cubes is a gold backed crypto asset. Utilizing This is G as a long-term business partner within the Blockchain industry. Responsible for all technology related operations, This is G has signficant first hand experience in bringing ICO's to market.</p>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+
+
+            <section class="font-1 color-white py-0">
+                <div class="background-holder overlay" style="background-image:url(assets/images/block5.JPG);"> </div>
+                <!--/.background-holder-->
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col text-center py-8 push-lg-6">
+                            <a class="video-modal mb-3 d-inline-block" href="https://www.youtube.com/watch?v=a_NQXOteJRk&t=31s" target="_blank" data-start="1" data-end="92">
+                                <img src="assets/images/icon-play.svg" width="80">
+                            </a>
+                        </div>
+                        <div class="col-lg-6 background-1 px-3 px-lg-8 py-11 pull-lg-6">
+                            <h4 class="fw-400">EatDrinX</h4>
+                            <p class="lead color-9">EatDrinX is founders inaugural project within the Food Tech Industry. This platform is broad in scope and represents a consumer application and industry application. Consumers filter information based on geo-location, while Establishments add/edit/delete information with social sharing integration. EatDrinX had a successful market test and is currently being re-imagined to capitalize on a maturing global market.</p>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+
+
+            <section class="font-1 color-white py-0">
+                <div class="background-holder overlay" style="background-image:url(assets/images/block5.JPG);"> </div>
+                <!--/.background-holder-->
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col text-center py-8 push-lg-6">
+                            <a class="video-modal mb-3 d-inline-block" href="https://www.youtube.com/watch?v=3LW3QLutnz0&list=PLClO18TEjlkIqNBvII3-zsJSkLi5o7oYO&index=3" target="_blank"  data-start="1" data-end="88">
+                                <img src="assets/images/icon-play.svg" width="80">
+                            </a>
+                        </div>
+                        <div class="col-lg-6 background-1 px-3 px-lg-8 py-11 pull-lg-6">
+                            <h4 class="fw-400">EDX Festivals</h4>
+                            <p class="lead color-9">Leveraging the EatDrinX Platform, EDX Festivals was a spin-off for the Festival industry. To better understand the scope of the Food Technology that was created via EatDrinX, Matt and Pramod partnered with a local festival to explore the viability of a "Vendor Showcase Application for Festivals". Utilizing the 2 applicaiton approach, establishments enter product / service information while consumers use their application to filter information based on geo-location.</p>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+
+
+            <section class="font-1 color-white py-0">
+                <div class="background-holder overlay" style="background-image:url(assets/images/block5.JPG);"> </div>
+                <!--/.background-holder-->
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col text-center py-8 push-lg-6">
+                            <a class="video-modal mb-3 d-inline-block" href="https://www.youtube.com/watch?v=FvIkOXHlf-E" target="_blank"  data-start="1" data-end="50">
+                                <img src="assets/images/icon-play.svg" width="80">
+                            </a>
+                        </div>
+                        <div class="col-lg-6 background-1 px-3 px-lg-8 py-11 pull-lg-6">
+                            <h4 class="fw-400">Culinary Trail</h4>
+                            <p class="lead color-9">Barrels, Bottles and Brews is a Passport / Culinary Trail Application. Based on geo-location, users able to discover producers and check-in upon visiting an establishment. Once a specific number of check-ins takes place, the individual is able redeem their activity for a prize. This application has wide spread appeal and can be adapted to various tourism / culinary industries.</p>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+
+
+
+            <section class="font-1 color-white py-0">
+                <div class="background-holder overlay" style="background-image:url(assets/images/block5.JPG);"> </div>
+                <!--/.background-holder-->
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col text-center py-8 push-lg-6">
+                            <a class="video-modal mb-3 d-inline-block" href="https://www.youtube.com/watch?v=9QiIC6Y9EDk" target="_blank" data-start="1" data-end="596">
+                                <img src="assets/images/icon-play.svg" width="80">
+                            </a>
+                        </div>
+                        <div class="col-lg-6 background-1 px-3 px-lg-8 py-11 pull-lg-6">               
+                            <h4 class="fw-400">Travel Industry</h4>
+                            <p class="lead color-9">Simplifly is a mistake air-fare applicaiton. Users are able to select their preferred departure cities and add specific destinations to their wish list. A simple user interface, the home screen represents available "deals" based on a users geo-location. Users shall receive push and email notifications as deals meet specific parameters.</p>
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+
+
+
+
+           <section class="font-1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2 hidden-md-down">
+                       
+                        </div>
+                        <div class="col-12 hidden-lg-up">
+                            <h2 class="mb-5">Dedicated Teams</h2>
+                        </div>
+                        <div class="col-lg-6">
+                            <h5 class="mb-4">&#8212; Story Behind G</h5>
+                            <p class="lead mb-5 color-5">This is G evolved into a tech company as a direct result of good people with genuine intentions.  While the brand may not initially scream world-class international tech company, the consistency of our approach will ensure you never forget it. Technology has evolved to the point where anything you can imagine is possible, if your genuine in your desire to getting it done, you found the team/partners to make it happen. </p>
+
+                            
+                            <h5 class="mb-4">&#8212; Mission &amp; Vision</h5>
+                            <p class="color-5 mb-lg-0 mb-5">The company exists to be genuine in its approach to forging relationships by being accountable and delivering expectations. By understanding competencies, abilities, and experience, the company shall only commit itself to obligations that are in line with its values and strategy. With communication and transparency at the forefront, the mission is to do good business with good people, creating meaningful solutions that move the needle forward for the betterment of all. </p>
+                        </div>
+
+                        <div class="col-lg-4 pl-lg-5">
+                            <h5 class="mb-0">&#8212; Founded in</h5>
+                            <div class="fs-5 fw-100 mb-5">2011</div>
+                            <h5 class="mb-3">&#8212; Offices in</h5>
+                            <p class="fs-3 color-7 lh-1 mb-5 fw-300">Toronto &amp; Mumbai</p>
+                            <h5 class="mb-3">&#8212; Services</h5>
+                            <p class="lead color-5">Custom Solutions, Blockchain, Mobile Apps, Web, &amp; Digital Marketing</p>
+                        
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+           
+
+
+
+            <section class="py-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 mb-4">
+                            <img src="assets/images/IMG_9428.JPG">
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <img src="assets/images/IMG_9430.JPG">
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+
+
+            <!--section>
+                <div class="container">
+                    <h4 class="text-center mb-7">PERKS AND BENEFITS</h4>
+                    <div class="row">
+                        <div class="col-xl-6 mb-5">
+                            <h5 class="color-2 mb-3">Relax, We've Got You Covered</h5>
+                            <p class="font-1 color-6 fw-300">Posh comes with 100+ built in layouts. Rigorously tested and optimized for phones, tabs, laptops and all other devices. You can change it, reform it, renovate it and make any design you wish. Just start and make anything you
+                                want. Anything you can think of. A multiverse template with modularity at core that gives you the power to make sites in no time with minimum coding.</p>
+                        </div>
+                        <div class="col-xl-6 mb-5">
+                            <h5 class="color-2 mb-3">Work-life Balance</h5>
+                            <p class="font-1 color-6 fw-300">Crafted with Bootstrap 4; Highly Customizable Posh's visual style is simple yet distinct. Customize colors, buttons, typography, gaps, spaces and everything for every single screen sizes individually without writing any CSS
+                                at all.With enormous built in layouts, rigorously tested and optimized for laptops, phones, tabs and every other devices; Posh empowers you to design sites in a more flexible and multitudinous way.</p>
+                        </div>
+                        <div class="col-xl-6 mb-5">
+                            <h5 class="color-2 mb-3">Stay Informed</h5>
+                            <p class="font-1 color-6 fw-300">For years, ThemeWagon templates have stood for beautiful design and excellent quality. Posh is more than all that; it's built to take on the future - with rethink coding structures, great feel and ideal balance of performance
+                                &amp; elegance. What's the best, Posh will stay error free &amp; up to date with the excellent customer support and regular updates.</p>
+                        </div>
+                        <div class="col-xl-6 mb-5">
+                            <h5 class="color-2 mb-3">We Value Our People</h5>
+                            <p class="font-1 color-6 fw-300">We just upgraded you as a web designer, thanks to the possibilities of making infinite layouts with Posh in uncomplicated and fluent ways. That's a fancy way of saying that you can make great websites. Posh fits smoothly in
+                                all the screen sizes including desktops, laptops, tablets, iPads and more.</p>
+                        </div>
+                    </div>
+           
+                </div>
+           
+            </section-->
+
+
+
+
+            
+            <footer class="background-1 color-8 py-3 fs--1 fw-600 font-heading">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-auto font-1">&copy; 2018 This is G Inc. </div>
+                        <div class="col fs-0 text-right">
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-behance"></i>
+                            </a>
+                            <a class="p-2 color-8" href="#">
+                                <i class="fa fa-dribbble"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+        <!--  -->
+        <!--    JavaScripts-->
+        <!--    =============================================-->
+        <script src="assets/lib/jquery/dist/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+        <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
+        <script src="assets/lib/rellax/rellax.js"></script>
+        <script src="assets/lib/typed.js/dist/typed.min.js"></script>
+        <script src="assets/lib/isotope/dist/isotope.pkgd.js"></script>
+        <script src="assets/js/googlemap.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoK8GIrOHzHwnzHCyqrdtmTpUWcdrTTD8&callback=initMap"></script>
+        <script src="assets/lib/prism/prism.js"></script>
+        <script src="assets/lib/semantic-ui-accordion/accordion.js"></script>
+        <script src="assets/lib/semantic-ui-transition/transition.js"></script>
+        <script src="assets/js/core.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
