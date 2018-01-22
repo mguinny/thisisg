@@ -3,6 +3,9 @@
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
   xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url> 
+    <loc>http://thisisg.com/</loc> 
+    </url>
+  <url> 
     <loc>http://thisisg.com/index.html</loc> 
     </url>
     <url>
@@ -38,6 +41,30 @@
     <url>
     <loc>http://thisisg.com/page-maintenance.html</loc> 
   </url>
+    <url>
+    <loc>http://thisisg.com/restaurant.html</loc> 
+  </url>
+     <url>
+    <loc>http://thisisg.com/accomodations.html</loc> 
+  </url>
+     <url>
+    <loc>http://thisisg.com/health-care.html</loc> 
+  </url>
+     <url>
+    <loc>http://thisisg.com/education.html</loc> 
+  </url>
+     <url>
+    <loc>http://thisisg.com/e-commerce.html</loc> 
+  </url>
+    <url>
+    <loc>http://thisisg.com/tourism.html</loc> 
+  </url>
+   <url>
+    <loc>http://thisisg.com/404.html</loc> 
+  </url>
+  
+
+   
    
   
 </urlset>
