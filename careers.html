@@ -7,7 +7,7 @@
         <!--  -->
         <!--    Document Title-->
         <!-- =============================================-->
-        <title>Full Suite Technology Company. Blockchain, Mobile and Web Digital Solutions</title>
+        <title>Full Suite Technology Company. Blockchain, Mobile and Web Digital Solutions | This is G</title>
         <!--  -->
         <!--    Favicons-->
         <!--    =============================================-->
@@ -45,6 +45,8 @@
         <link href="assets/lib/prism/prism.css" rel="stylesheet">
         <link href="assets/lib/semantic-ui-accordion/accordion.css" rel="stylesheet">
         <link href="assets/lib/semantic-ui-transition/transition.css" rel="stylesheet">
+        <link href="assets/lib/flexslider/flexslider.css" rel="stylesheet">
+        <link href="assets/lib/semantic-ui-dropdown/dropdown.css" rel="stylesheet">
 
         <link rel="stylesheet" href="animate.min.css">
 
@@ -56,19 +58,20 @@
 
         <link rel="shortcut icon" href="24.ico" type="image/x-icon">
         
-        <meta name="description" content="This is G - A Full Suite Technology Company. Blockchain, Mobile and Web Development, Cloud Computing, Digital Marketing, Branding and Content Creation. Digital Solution from an International Tech Company."/>
+        <meta name="description" content="This is G - A Full Suite Technology Company. Blockchain, Mobile and Web Development, Cloud Computing, Digital Marketing, Branding and Content Creation. Digital Solutions from an International Tech Company."/>
 
         <meta name="keywords" content="Full Stack, Full Suite, G Suite, Blockchain, Blockchain Solutions, Blockchain Development, Mobile Development, Mobile Applications, Mobile App, Mobile Solutions, Techology, Technology Company, Technology Solutions, Technology Development. Toronto, Montreal, London, Windsor Ontario, Detroit Michigan". /-->
 
-        <!-- Global Site Tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107350529-1"></script>
+        <meta name="google-site-verification" content="AXnwMz2GUxbBmkEJprBAlQpGlXFAyC7buXcB5GJKeDk" />
         
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112829618-1"></script>
         <script>
-                 window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments)};
-                gtag('js', new Date());
+         window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-                gtag('config', 'UA-107350529-1');
+        gtag('config', 'UA-112829618-1');
         </script>
 
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -79,76 +82,12 @@
         <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
         
 
-        <script type="text/javascript" >
-
-        $(document).ready(function(){
-
-            $(".example").TimeCircles({circle_bg_color: "#000000",time: {
-    Days: { color: "#FFD700" },
-    Hours: { color: "#FFD700" },
-    Minutes: { color: "#FFD700" },
-    Seconds: { color: "#FFD700" }
-    },animation: "smooth"}); 
-        })
-
-            var messagesRef = new Firebase('https://ic3cubes-db.firebaseio.com/');
-
-                   function postinquiry(e) {
-                     e.preventDefault();
-                   console.log('sadfasdfvalue');
-                    console.log(document.getElementById("name").value);
-        
-                    if(document.getElementById("name").value !== "" &&  document.getElementById("email").value !== "" &&  document.getElementById("message").value !== ""){
-                        var data ={
-                        name: document.getElementById("name").value,
-                        email: document.getElementById("email").value,
-                        message: document.getElementById("message").value,
-                        }
-                        messagesRef.push(data, function(error) {
-                         if (error){
-                            document.getElementById("message13").style.display = "block";
-                            console.log('Error has occured during saving process');
-                            document.getElementById("name").value='';
-                            document.getElementById("email").value='';
-                            document.getElementById("message").value='';
-
-                        /// $('#ErrormyModal').modal('show');
-                         }else{
-
-                        //  $(document).ready(function() {
-                        //        $("#myModal").modal('show');
-                        //  });
-                        //  $('#myModal').modal('show');
-                        document.getElementById("message12").style.display = "block";
-                        
-                            document.getElementById("name").value='';
-                            document.getElementById("email").value='';
-                            document.getElementById("message").value='';
-                            console.log("Data hss been saved succesfully");
-                         }
-                         
-                    })
-                    } else{
-                        document.getElementById("message14").style.display = "block";
-                            console.log('Validation Error');
-                        //$('#ValidationModal').modal('show');
-                    }
-        
-                    }
-                    function resetForm(){
-                        document.getElementById("message14").style.display = "none";
-                        document.getElementById("message13").style.display = "none";
-                        document.getElementById("message12").style.display = "none";
-
-                    }
-
-        </script>
-
+       
 
     </head>
     
 
-    <body data-spy="scroll" data-target=".inner-link" data-offset="60">
+ <body data-spy="scroll" data-target=".inner-link" data-offset="60">
         <main>
             <div class="znav-container znav-white znav-fixed border-bottom-nav color-10" id="znav-container">
                 <div class="container">
@@ -173,15 +112,15 @@
                                 <a href="JavaScript:void(0)">ABOUT</a>
                                 <ul class="dropdown dropdown-push-left">
                                                 <li>
-                                                    <a href="page-about-company.html">Company</a>
+                                                    <a href="about-company.html">Company</a>
                                                 </li>
 
                                                 <li>
-                                                    <a href="page-about-team.html">Team</a>
+                                                    <a href="about-team.html">Team</a>
                                                 </li>
                                                 
                                                 <li>
-                                                    <a href="page-careers.html">Careers</a>
+                                                    <a href="careers.html">Careers</a>
                                                 </li>
                                                   
                                      </ul>
@@ -230,12 +169,12 @@
                                 <a href="JavaScript:void(0)">CLIENTS</a>
                                 <ul class="dropdown dropdown-push-left">    
                                                 <li>
-                                                    <a href="page-portfolio.html">Portfolio</a>
+                                                    <a href="portfolio.html">Portfolio</a>
                                                 </li>   
 
 
                                                 <li>
-                                                    <a href="page-examples.html">Examples</a>
+                                                    <a href="examples.html">Examples</a>
                                                 </li> 
 
                                       </ul>
@@ -256,114 +195,62 @@
 
 
 
-
+            
             <section class="p-0 color-white font-1">
-                <div class="background-holder overlay overlay-1" style="background-image:url(assets/images/about-team-header.jpg);"> </div>
+                <div class="background-holder overlay overlay-1" style="background-image:url(assets/images/careers-header.jpg);"> </div>
                 <!--/.background-holder-->
                 <div class="container">
-                     <div class="row color-white">
+                    <div class="row color-white">
                         <div class="col-md-8 py-10">
-                            <h1 class="fs-3 fs-md-4 mb-3">About G</h1>
-                            <p class="lead fw-500 fs-xs-1">World Class Standard | Genuine Approach | Full Suite</p>
+                            <h5 class="text-uppercase ls">CAREERS</h5>
+                            <h1 class="fs-4">join our team</h1>
                         </div>
                     </div>
                     <!--/.row-->
                 </div>
                 <!--/.container-->
             </section>
-
-
-
-            <section class="font-1">
+            <section class="background-0 font-1 pb-0">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-lg-2 hidden-md-down">
-                            <div class="perpendicular">
-                                <h2 class="color-9 fs-6 text-uppercase lh-0" style="transform: translateY(36px);">Our&nbsp;Story</h2>
-                            </div>
-                        </div>
-                        <div class="col-12 hidden-lg-up">
-                            <h2 class="mb-5">Our Story</h2>
-                        </div>
-                        <div class="col-lg-6">
-                            <h5 class="mb-4">&#8212; Story Behind G</h5>
-                            <p class="lead mb-5 color-5">This is G evolved into a tech company as a direct result of good people with genuine intentions, sharing culture and international opportunities with trust and mutual respect. While the brand may not initially scream world-class international tech company, the consistency of our approach will ensure you never forget it. </p>
-
-                            
-                            <h5 class="mb-4">&#8212; Mission &amp; Vision</h5>
-                            <p class="lead color-5 mb-lg-0 mb-5">The company exists to forge relationships through transparency, communication, accountability and delivering expectations. By understanding competencies, abilities, and experience, the company shall only commit itself to obligations that are in line with its values and strategy. The mission is to do good business with good people, creating meaningful solutions that move the needle forward for the betterment of all. </p>
-                        </div>
-
-                        <div class="col-lg-4 pl-lg-5">
-                            <h5 class="mb-0">&#8212; Founded in</h5>
-                            <div class="fs-5 fw-100 mb-5">2011</div>
-                            <h5 class="mb-3">&#8212; Offices in</h5>
-                            <p class="fs-3 color-7 lh-1 mb-5 fw-300">Toronto &amp; Mumbai</p>
-                            <h5 class="mb-3">&#8212; Services</h5>
-                            <p class="lead color-5">Custom Software Development, Blockchain, Mobile Apps, Web, &amp; Digital Marketing</p>
-                        
-                        </div>
+                    <div class="row justify-content-center text-center">
+                        <div class="col-md-9 mt-4">
+                            <p class="font-1 fs-2 fw-300 color-5">This is G is a progressive company, always looking to connect with good people. If you have a passion for technology, operate with good communication and transparency, send us a message. Working with good people is what we are all about. </p>
+                            <hr class="mt-8 color-9"> </div>
                     </div>
                     <!--/.row-->
                 </div>
                 <!--/.container-->
             </section>
-
-
-
-            <section class="font-1 pt-4 text-center">
+            <section class="background-0 font-1">
                 <div class="container">
-                    <div class="row row align-items-center justify-content-center">
-                        <div class="col-lg-10">
-                           <h3 class="mb-4">World Class Technology Partner</h3>
-                            <p class="lead color-5">With offices in Toronto and Mumbai, This is G offers international expertise to meet evolving technology needs. 
-                                .</p>
-                            <div class="row mt-7">
-                                <div class="col-md-6 mb-4">
-                                    <div class="border color-9 p-4">
-                                        <h5 class="fs-5 color-3 fw-300">1.</h5>
-                                        <h5 class="mb-2 color-1 fw-400">Blockchain</h5>
-                                        <p class="color-5 fw-300">Real world Blockchain solutions. Dedicated Blockchain development teams bringing the latest technology to the mainstream.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="border color-9 p-4">
-                                        <h5 class="fs-5 color-3 fw-300">2.</h5>
-                                        <h5 class="mb-2 color-1 fw-400">Full Stack</h5>
-                                        <p class="color-5 fw-300">Mobile and Web Applications utilizing the latest in development technology. Limitless potential to realize your vision.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="border color-9 p-4">
-                                        <h5 class="fs-5 color-3 fw-300">3.</h5>
-                                        <h5 class="mb-2 color-1 fw-400">Cloud Solutions</h5>
-                                        <p class="color-5 fw-300">We've been working in the cloud since 2013 and absolutely love it. 99.999% up time with unmatched security.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="border color-9 p-4">
-                                        <h5 class="fs-5 color-3 fw-300">4.</h5>
-                                        <h5 class="mb-2 color-1 fw-400">Digital Marketing</h5>
-                                        <p class="color-5 fw-300">From a timely website overhaul, to digital advertising, we understand the needs to convert sales based on your digital presence.</p>
-                                    </div>
-                                </div>    
-                                <div class="col-md-6 mb-4">
-                                    <div class="border color-9 p-4">
-                                        <h5 class="fs-5 color-3 fw-300">5.</h5>
-                                        <h5 class="mb-2 color-1 fw-400">Dedicated Development Teams</h5>
-                                        <p class="color-5 fw-300">Hire hand-picked programmers and dedicated teams of developers according to your specific project needs. Outsource your IT needs at a fraction of the cost of hiring in-house. All intellectual property is fully protected with signed Non Disclosure Agreements.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="border color-9 p-4">
-                                        <h5 class="fs-5 color-3 fw-300">6.</h5>
-                                        <h5 class="mb-2 color-1 fw-400">Project Rescue</h5>
-                                        <p class="color-5 fw-300">Is your software project is off track? Don't rush to consider all your efforts and money wasted. We have the required knowledge, patience and resources to save your software project. Our experienced Architects, Software Developers, and Analysts have seen and fixed it all.</p>
-                                    </div>
-                                </div>
-                                
-                            </div>
+                    <div class="row justify-content-center text-center">
+                        <div class="col-md-8">
+                            <h4>OPEN POSITIONS</h4>
                         </div>
+                    </div>
+                    <div class="row mt-8">
+                        <a class="col-lg-6 col-xl-4 font-1 color-1 mb-4">
+                            <div class="border color-9 p-5">
+                                <div class="font-1 fs-6 fw-100 color-8 d-inline-block">1</div>
+                                <h5 class="color-1 mb-0">Project Manager</h5>
+                                <h6 class="color-7 d-inline-block">Canada (Toronto)</h6>
+                            </div>
+                        </a>
+                        <a class="col-lg-6 col-xl-4 font-1 color-1 mb-4">
+                            <div class="border color-9 p-5">
+                                <div class="font-1 fs-6 fw-100 color-8 d-inline-block">1</div>
+                                <h5 class="color-1 mb-0">VP Sales</h5>
+                                <h6 class="color-7 d-inline-block">International</h6>
+                            </div>
+                        </a>
+                        <a class="col-lg-6 col-xl-4 font-1 color-1 mb-4">
+                            <div class="border color-9 p-5">
+                                <div class="font-1 fs-6 fw-100 color-8 d-inline-block">3</div>
+                                <h5 class="color-1 mb-0">Full Stack Developer</h5>
+                                <h6 class="color-7 d-inline-block">Toronto & Mumbai</h6>
+                            </div>
+                        </a>
+                      
                     </div>
                     <!--/.row-->
                 </div>
@@ -372,13 +259,13 @@
 
 
 
-            <section class="text-center mb-7 font-1 pt-3">
+            <section class="text-center mb-7 font-1">
                 <div class="container mb-5">
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
-                            <h4 class="fw-400">Ready to start your project?</h4>
-                            <p class="lead color-5 mb-5">Connect with us to discuss your project, within a few moments we will have enough insight to provide genuine direction.</p>
-                            <a class="btn btn-primary text-uppercase ls" href="https://docs.google.com/forms/d/e/1FAIpQLSdKapEbHiPcEfMa4lKr9gxjj-vEjSVRdtnROxvWzJ1nK_vEGw/viewform?usp=sf_link" target="_blank">Explore Now</a>
+                            <h4 class="fw-400">Talented, Creative, Driven?</h4>
+                            <p class="lead color-5 mb-5">Connecting with innovative, driven, talented individuals is what this company wants to do. We've built numerous projects internally and are now utilizings relationships to continuously create solutions that solve challenging real world problems.</p>
+                            <a class="btn btn-primary text-uppercase ls" href="https://docs.google.com/forms/d/e/1FAIpQLSdKapEbHiPcEfMa4lKr9gxjj-vEjSVRdtnROxvWzJ1nK_vEGw/viewform?usp=sf_link" target="_blank">Message Us Now</a>
                         </div>
                     </div>
                     <!--/.row-->
@@ -389,6 +276,59 @@
 
 
 
+
+            <section class="py-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 mb-4">
+                            <img src="assets/images/bwtape.JPG">
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <img src="assets/images/bwgirl.JPG">
+                        </div>
+                    </div>
+                    <!--/.row-->
+                </div>
+                <!--/.container-->
+            </section>
+
+
+
+
+            <!--section>
+                <div class="container">
+                    <h4 class="text-center mb-7">PERKS AND BENEFITS</h4>
+                    <div class="row">
+                        <div class="col-xl-6 mb-5">
+                            <h5 class="color-2 mb-3">Relax, We've Got You Covered</h5>
+                            <p class="font-1 color-6 fw-300">Posh comes with 100+ built in layouts. Rigorously tested and optimized for phones, tabs, laptops and all other devices. You can change it, reform it, renovate it and make any design you wish. Just start and make anything you
+                                want. Anything you can think of. A multiverse template with modularity at core that gives you the power to make sites in no time with minimum coding.</p>
+                        </div>
+                        <div class="col-xl-6 mb-5">
+                            <h5 class="color-2 mb-3">Work-life Balance</h5>
+                            <p class="font-1 color-6 fw-300">Crafted with Bootstrap 4; Highly Customizable Posh's visual style is simple yet distinct. Customize colors, buttons, typography, gaps, spaces and everything for every single screen sizes individually without writing any CSS
+                                at all.With enormous built in layouts, rigorously tested and optimized for laptops, phones, tabs and every other devices; Posh empowers you to design sites in a more flexible and multitudinous way.</p>
+                        </div>
+                        <div class="col-xl-6 mb-5">
+                            <h5 class="color-2 mb-3">Stay Informed</h5>
+                            <p class="font-1 color-6 fw-300">For years, ThemeWagon templates have stood for beautiful design and excellent quality. Posh is more than all that; it's built to take on the future - with rethink coding structures, great feel and ideal balance of performance
+                                &amp; elegance. What's the best, Posh will stay error free &amp; up to date with the excellent customer support and regular updates.</p>
+                        </div>
+                        <div class="col-xl-6 mb-5">
+                            <h5 class="color-2 mb-3">We Value Our People</h5>
+                            <p class="font-1 color-6 fw-300">We just upgraded you as a web designer, thanks to the possibilities of making infinite layouts with Posh in uncomplicated and fluent ways. That's a fancy way of saying that you can make great websites. Posh fits smoothly in
+                                all the screen sizes including desktops, laptops, tablets, iPads and more.</p>
+                        </div>
+                    </div>
+           
+                </div>
+           
+            </section-->
+
+
+
+
+            
             <footer class="background-1 color-8 py-3 fs--1 fw-600 font-heading">
                 <div class="container">
                     <div class="row align-items-center">
@@ -413,9 +353,9 @@
                     </div>
                 </div>
             </footer>
-        
+       
 
-         </main>
+        </main>
         <!--  -->
         <!--    JavaScripts-->
         <!--    =============================================-->
@@ -435,4 +375,3 @@
         <script src="assets/js/main.js"></script>
     </body>
 </html>
-

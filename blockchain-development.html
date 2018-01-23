@@ -7,7 +7,7 @@
         <!--  -->
         <!--    Document Title-->
         <!-- =============================================-->
-        <title>Full Suite Technology Company. Blockchain, Mobile and Web Digital Solutions</title>
+        <title>Full Suite Blockchain Development. Custom Blockchain Solutions | This is G</title>
         <!--  -->
         <!--    Favicons-->
         <!--    =============================================-->
@@ -45,6 +45,8 @@
         <link href="assets/lib/prism/prism.css" rel="stylesheet">
         <link href="assets/lib/semantic-ui-accordion/accordion.css" rel="stylesheet">
         <link href="assets/lib/semantic-ui-transition/transition.css" rel="stylesheet">
+        <link href="assets/lib/flexslider/flexslider.css" rel="stylesheet">
+        <link href="assets/lib/semantic-ui-dropdown/dropdown.css" rel="stylesheet">
 
         <link rel="stylesheet" href="animate.min.css">
 
@@ -56,19 +58,20 @@
 
         <link rel="shortcut icon" href="24.ico" type="image/x-icon">
         
-        <meta name="description" content="This is G - A Full Suite Technology Company. Blockchain, Mobile and Web Development, Cloud Computing, Digital Marketing, Branding and Content Creation. Digital Solution from an International Tech Company."/>
+        <meta name="description" content="Full Suite Blockchain Development, Full Suite Blockchain Technology Development. Blockchain Consulting, Blockchain Development, Wallet and Token Creation, Blockchain Exchange Development.  Turn Key ICO Solutions from Website, Token Generation and Whitepaper.  Digital Solutions from an International Full Suite Tech Company."/>
 
-        <meta name="keywords" content="Full Stack, Full Suite, G Suite, Blockchain, Blockchain Solutions, Blockchain Development, Mobile Development, Mobile Applications, Mobile App, Mobile Solutions, Techology, Technology Company, Technology Solutions, Technology Development. Toronto, Montreal, London, Windsor Ontario, Detroit Michigan". /-->
+        <meta name="keywords" content="Blockchain Tech, Blockchain Development Company, ICO Developent, ICO Partnership, ICO Development, Blockchain Consulting, Blockchain Solutions, Mobile Blockchain Solutions, Toronto, Montreal, London, Windsor Ontario, Detroit Michigan. "/>
 
-        <!-- Global Site Tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107350529-1"></script>
+        <meta name="google-site-verification" content="AXnwMz2GUxbBmkEJprBAlQpGlXFAyC7buXcB5GJKeDk" />
         
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112829618-1"></script>
         <script>
-                 window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments)};
-                gtag('js', new Date());
+         window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-                gtag('config', 'UA-107350529-1');
+        gtag('config', 'UA-112829618-1');
         </script>
 
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -79,71 +82,7 @@
         <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
         
 
-        <script type="text/javascript" >
-
-        $(document).ready(function(){
-
-            $(".example").TimeCircles({circle_bg_color: "#000000",time: {
-    Days: { color: "#FFD700" },
-    Hours: { color: "#FFD700" },
-    Minutes: { color: "#FFD700" },
-    Seconds: { color: "#FFD700" }
-    },animation: "smooth"}); 
-        })
-
-            var messagesRef = new Firebase('https://ic3cubes-db.firebaseio.com/');
-
-                   function postinquiry(e) {
-                     e.preventDefault();
-                   console.log('sadfasdfvalue');
-                    console.log(document.getElementById("name").value);
-        
-                    if(document.getElementById("name").value !== "" &&  document.getElementById("email").value !== "" &&  document.getElementById("message").value !== ""){
-                        var data ={
-                        name: document.getElementById("name").value,
-                        email: document.getElementById("email").value,
-                        message: document.getElementById("message").value,
-                        }
-                        messagesRef.push(data, function(error) {
-                         if (error){
-                            document.getElementById("message13").style.display = "block";
-                            console.log('Error has occured during saving process');
-                            document.getElementById("name").value='';
-                            document.getElementById("email").value='';
-                            document.getElementById("message").value='';
-
-                        /// $('#ErrormyModal').modal('show');
-                         }else{
-
-                        //  $(document).ready(function() {
-                        //        $("#myModal").modal('show');
-                        //  });
-                        //  $('#myModal').modal('show');
-                        document.getElementById("message12").style.display = "block";
-                        
-                            document.getElementById("name").value='';
-                            document.getElementById("email").value='';
-                            document.getElementById("message").value='';
-                            console.log("Data hss been saved succesfully");
-                         }
-                         
-                    })
-                    } else{
-                        document.getElementById("message14").style.display = "block";
-                            console.log('Validation Error');
-                        //$('#ValidationModal').modal('show');
-                    }
-        
-                    }
-                    function resetForm(){
-                        document.getElementById("message14").style.display = "none";
-                        document.getElementById("message13").style.display = "none";
-                        document.getElementById("message12").style.display = "none";
-
-                    }
-
-        </script>
-
+       
 
     </head>
     
@@ -173,15 +112,15 @@
                                 <a href="JavaScript:void(0)">ABOUT</a>
                                 <ul class="dropdown dropdown-push-left">
                                                 <li>
-                                                    <a href="page-about-company.html">Company</a>
+                                                    <a href="about-company.html">Company</a>
                                                 </li>
 
                                                 <li>
-                                                    <a href="page-about-team.html">Team</a>
+                                                    <a href="about-team.html">Team</a>
                                                 </li>
                                                 
                                                 <li>
-                                                    <a href="page-careers.html">Careers</a>
+                                                    <a href="careers.html">Careers</a>
                                                 </li>
                                                   
                                      </ul>
@@ -230,12 +169,12 @@
                                 <a href="JavaScript:void(0)">CLIENTS</a>
                                 <ul class="dropdown dropdown-push-left">    
                                                 <li>
-                                                    <a href="page-portfolio.html">Portfolio</a>
+                                                    <a href="portfolio.html">Portfolio</a>
                                                 </li>   
 
 
                                                 <li>
-                                                    <a href="page-examples.html">Examples</a>
+                                                    <a href="examples.html">Examples</a>
                                                 </li> 
 
                                       </ul>
@@ -252,7 +191,6 @@
                 <!-- /.container-->
             </div>
             <!-- /.znav-container-->
-
 
 
 

@@ -1,70 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
-  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
-  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-  <url> 
-    <loc>http://thisisg.com/</loc> 
-    </url>
-  <url> 
-    <loc>http://thisisg.com/index.html</loc> 
-    </url>
-    <url>
-    <loc>http://thisisg.com/page-about-company.html</loc> 
-  </url>
-    <url>
-    <loc>http://thisisg.com/page-about-team.html</loc> 
-  </url>
-    <url>
-    <loc>http://thisisg.com/page-careers.html</loc> 
-  </url>
-    <url>
-    <loc>http://thisisg.com/custom-software-development.html</loc> 
-  </url>  
-  <url>
-    <loc>http://thisisg.com/mobile-app-development.html</loc> 
-  </url>
-    <url>
-    <loc>http://thisisg.com/blockchain-development.html</loc> 
-  </url>
-    <url>
-    <loc>http://thisisg.com/dedicated-software-development-teams.html</loc> 
-  </url>
-    <url>
-    <loc>http://thisisg.com/new-project-startups.html</loc> 
-  </url>
-    <url>
-    <loc>http://thisisg.com/pages-portfolio.html</loc> 
-  </url>
-    <url>
-    <loc>http://thisisg.com/page-examples.html</loc> 
-  </url>
-    <url>
-    <loc>http://thisisg.com/page-maintenance.html</loc> 
-  </url>
-    <url>
-    <loc>http://thisisg.com/restaurant.html</loc> 
-  </url>
-     <url>
-    <loc>http://thisisg.com/accomodations.html</loc> 
-  </url>
-     <url>
-    <loc>http://thisisg.com/health-care.html</loc> 
-  </url>
-     <url>
-    <loc>http://thisisg.com/education.html</loc> 
-  </url>
-     <url>
-    <loc>http://thisisg.com/e-commerce.html</loc> 
-  </url>
-    <url>
-    <loc>http://thisisg.com/tourism.html</loc> 
-  </url>
-   <url>
-    <loc>http://thisisg.com/404.html</loc> 
-  </url>
-  
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-   
-   
-  
+
+<url>
+  <loc>http://thisisg.com/</loc>
+  <lastmod>2018-01-23T02:01:14+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://thisisg.com/index.html</loc>
+  <lastmod>2018-01-23T02:01:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://thisisg.com/about-company.html</loc>
+  <lastmod>2018-01-23T02:01:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://thisisg.com/about-team.html</loc>
+  <lastmod>2018-01-23T02:01:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://thisisg.com/careers.html</loc>
+  <lastmod>2018-01-23T02:01:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://thisisg.com/custom-software-development.html</loc>
+  <lastmod>2018-01-23T02:01:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://thisisg.com/mobile-app-development.html</loc>
+  <lastmod>2018-01-23T02:01:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://thisisg.com/blockchain-development.html</loc>
+  <lastmod>2018-01-23T02:01:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://thisisg.com/dedicated-software-development-teams.html</loc>
+  <lastmod>2018-01-23T02:01:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://thisisg.com/new-project-startups.html</loc>
+  <lastmod>2018-01-23T02:01:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://thisisg.com/portfolio.html</loc>
+  <lastmod>2018-01-23T02:01:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://thisisg.com/examples.html</loc>
+  <lastmod>2018-01-23T02:01:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://thisisg.com/restaurant.html</loc>
+  <lastmod>2018-01-23T02:01:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://thisisg.com/accomodations.html</loc>
+  <lastmod>2018-01-23T02:01:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://thisisg.com/health-care.html</loc>
+  <lastmod>2018-01-23T02:01:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://thisisg.com/education.html</loc>
+  <lastmod>2018-01-23T02:01:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://thisisg.com/e-commerce.html</loc>
+  <lastmod>2018-01-23T02:01:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://thisisg.com/tourism.html</loc>
+  <lastmod>2018-01-23T02:01:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>

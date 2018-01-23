@@ -7,7 +7,7 @@
         <!--  -->
         <!--    Document Title-->
         <!-- =============================================-->
-        <title>Full Suite Technology Company. Blockchain, Mobile and Web Development Solutions</title>
+        <title>Technology Ideas. Anything you can Imagine is Possible | This is G</title>
         <!--  -->
         <!--    Favicons-->
         <!--    =============================================-->
@@ -45,6 +45,8 @@
         <link href="assets/lib/prism/prism.css" rel="stylesheet">
         <link href="assets/lib/semantic-ui-accordion/accordion.css" rel="stylesheet">
         <link href="assets/lib/semantic-ui-transition/transition.css" rel="stylesheet">
+        <link href="assets/lib/flexslider/flexslider.css" rel="stylesheet">
+        <link href="assets/lib/semantic-ui-dropdown/dropdown.css" rel="stylesheet">
 
         <link rel="stylesheet" href="animate.min.css">
 
@@ -54,21 +56,22 @@
         <link href="assets/css/style.css" rel="stylesheet">
         <link href="assets/css/custom.css" rel="stylesheet"> 
 
-        <link rel="shortcut icon" href="7.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="24.ico" type="image/x-icon">
         
-        <meta name="description" content="This is G - A Full Suite Technology Company. Blockchain, Mobile and Web Development, Cloud Computing, Digital Marketing, Branding and Content Creation. "/>
+        <meta name="description" content="A Full Suite Technology Company that Believes Anything is Possible. Its time for a Technology Makeover. Outsource your Technology needs with an experienced international technology company. Specializing in  Blockchain, Mobile and Web Development, Cloud Computing, Digital Marketing, Branding and Content Creation. Digital Solutions for a Changing World."/>
 
-        <meta name="keywords" content="Full Stack, Full Suite, G Suite, Blockchain, Blockchain Solutions, Mobile Applications, Mobile App, Mobile Solutions, Techology, Technology Company, Technology Solutions, Toronto, Montreal, London, Windsor Ontario, Detroit Michigan". /-->
+        <meta name="keywords" content="Full Stack, Full Suite, Blockchain, Blockchain Solutions, Blockchain Development, Mobile Development, Mobile Applications, Mobile App, Mobile Solutions, Techology, Technology Company, Technology Solutions, Technology Development. Toronto, Montreal, London, Windsor Ontario, Detroit Michigan". /-->
 
-        <!-- Global Site Tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107350529-1"></script>
+        <meta name="google-site-verification" content="AXnwMz2GUxbBmkEJprBAlQpGlXFAyC7buXcB5GJKeDk" />
         
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112829618-1"></script>
         <script>
-                 window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments)};
-                gtag('js', new Date());
+         window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-                gtag('config', 'UA-107350529-1');
+        gtag('config', 'UA-112829618-1');
         </script>
 
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -79,76 +82,12 @@
         <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
         
 
-        <script type="text/javascript" >
-
-        $(document).ready(function(){
-
-            $(".example").TimeCircles({circle_bg_color: "#000000",time: {
-    Days: { color: "#FFD700" },
-    Hours: { color: "#FFD700" },
-    Minutes: { color: "#FFD700" },
-    Seconds: { color: "#FFD700" }
-    },animation: "smooth"}); 
-        })
-
-            var messagesRef = new Firebase('https://ic3cubes-db.firebaseio.com/');
-
-                   function postinquiry(e) {
-                     e.preventDefault();
-                   console.log('sadfasdfvalue');
-                    console.log(document.getElementById("name").value);
-        
-                    if(document.getElementById("name").value !== "" &&  document.getElementById("email").value !== "" &&  document.getElementById("message").value !== ""){
-                        var data ={
-                        name: document.getElementById("name").value,
-                        email: document.getElementById("email").value,
-                        message: document.getElementById("message").value,
-                        }
-                        messagesRef.push(data, function(error) {
-                         if (error){
-                            document.getElementById("message13").style.display = "block";
-                            console.log('Error has occured during saving process');
-                            document.getElementById("name").value='';
-                            document.getElementById("email").value='';
-                            document.getElementById("message").value='';
-
-                        /// $('#ErrormyModal').modal('show');
-                         }else{
-
-                        //  $(document).ready(function() {
-                        //        $("#myModal").modal('show');
-                        //  });
-                        //  $('#myModal').modal('show');
-                        document.getElementById("message12").style.display = "block";
-                        
-                            document.getElementById("name").value='';
-                            document.getElementById("email").value='';
-                            document.getElementById("message").value='';
-                            console.log("Data hss been saved succesfully");
-                         }
-                         
-                    })
-                    } else{
-                        document.getElementById("message14").style.display = "block";
-                            console.log('Validation Error');
-                        //$('#ValidationModal').modal('show');
-                    }
-        
-                    }
-                    function resetForm(){
-                        document.getElementById("message14").style.display = "none";
-                        document.getElementById("message13").style.display = "none";
-                        document.getElementById("message12").style.display = "none";
-
-                    }
-
-        </script>
-
+       
 
     </head>
     
 
-    <body data-spy="scroll" data-target=".inner-link" data-offset="60">
+ <body data-spy="scroll" data-target=".inner-link" data-offset="60">
         <main>
             <div class="znav-container znav-white znav-fixed border-bottom-nav color-10" id="znav-container">
                 <div class="container">
@@ -173,15 +112,15 @@
                                 <a href="JavaScript:void(0)">ABOUT</a>
                                 <ul class="dropdown dropdown-push-left">
                                                 <li>
-                                                    <a href="page-about-company.html">Company</a>
+                                                    <a href="about-company.html">Company</a>
                                                 </li>
 
                                                 <li>
-                                                    <a href="page-about-team.html">Team</a>
+                                                    <a href="about-team.html">Team</a>
                                                 </li>
                                                 
                                                 <li>
-                                                    <a href="page-careers.html">Careers</a>
+                                                    <a href="careers.html">Careers</a>
                                                 </li>
                                                   
                                      </ul>
@@ -227,15 +166,15 @@
                             </li>
 
                             <li>
-                                <a href="JavaScript:void(0)">EXPERTISE</a>
+                                <a href="JavaScript:void(0)">CLIENTS</a>
                                 <ul class="dropdown dropdown-push-left">    
                                                 <li>
-                                                    <a href="financial-technology-fintech.html">FinTech</a>
+                                                    <a href="portfolio.html">Portfolio</a>
                                                 </li>   
 
 
                                                 <li>
-                                                    <a href="food-technology-foodtech.html">FoodTech</a>
+                                                    <a href="examples.html">Examples</a>
                                                 </li> 
 
                                       </ul>
@@ -258,13 +197,15 @@
 
             
             <section class="p-0 color-white font-1">
-                <div class="background-holder overlay overlay-1" style="background-image:url(assets/images/IMG_9397.JPG);"> </div>
+                <div class="background-holder overlay overlay-1" style="background-image:url(assets/images/edx1.jpg);"> </div>
                 <!--/.background-holder-->
-                <div class="container">
+                  <div class="container">
                     <div class="row color-white">
                         <div class="col-md-8 py-10">
                             <h4 class="text-uppercase ls"></h4>
-                            <h2 class="fs-4"></h2>
+                            <h2 class="fs-3 pt-6"></h2>
+                            <h2 class="fs-3 pt-6">International Team</h2>
+                            <h2 class="fs-3">Outsourcing Advantage</h2>
                         </div>
                     </div>
                     <!--/.row-->
@@ -274,76 +215,188 @@
 
 
 
-
-            <section class="background-0 font-1 pb-8">
+            <section class="portfolio text-center font-1">
                 <div class="container">
-                    <div class="row justify-content-center text-center">
-                        <div class="col-md-9 mt-4">
-                            <p class="font-1 fs-2 fw-300 color-5">This is G is a software outsourcing company that helps businesses manage complex, long-term software projects by providing dedicated teams and services. We are a one-stop provider of full-cycle software development, equipped to handle the end-to-end delivery of mid- to large-scale projects that span multiple technologies and disciplines. </p>
-                          </div>
-                    </div>
-                    <!--/.row-->
-                </div>
-                <!--/.container-->
-            </section>
+                    <h2 class="mb-4">G = Global Standard</h2>
 
 
+                     <p class="lead color-5">If you're still using the same Technology Suite as you were in 2015, its likely time for a makeover. Find your ideal website, favorite app, blockchain wallet, digital advertising campaign, etc. put your ideal vision together & contact us. </p>
+
+                      <p class="lead color-5">To compete in a global market you need to utilize global advantages. We build our relationships through communication and transaparency. While we believe that you should have a capable technology team on staff, makeovers don't usually happen at home and its time to go OUT. </p>
 
 
-
-            <section class="has-parallax p-0 color-white">
-                <div class="background-holder parallax overlay overlay-0" style="background-image:url(assets/images/about-team-header.jpg);" data-rellax-speed="-10"> </div>
-                <!--/.background-holder-->
-                <div class="container">
-                    <div class="row align-items-center py-8">
-                        <div class="col-lg-10">
-                            <h1 class="font-1 fw-600">Blockchain Innovation</h1>
-                            <p class="font-1 fs-2 fw-300">Since 2016, we have been actively working with ICO's and Blockchain projects. ERC-20 Ethereum experienced, flexible to implement whatever mix of blockchain technology you require. We understand the underlying technology and can adapt based on the project needs.</p>
-                   
+                    <hr class="short color-7">
+                    
+                    <div class="sortable mt-6">
+                        <div class="ui selection dropdown mb-6">
+                            <input type="hidden" name="catagories ">
+                            <i class="dropdown icon"></i>
+                            <div class="text">Web Ideas</div>
+                            <div class="menu">
+                                <div class="item" data-filter="*">Web Examples</div>
+                                <div class="item" data-filter=".products">Products</div>
+                                <div class="item" data-filter=".wellness">Wellness</div>
+                                <div class="item" data-filter=".hospitality">Hospitality</div>
+                            </div>
                         </div>
-                    </div>
-                    <!--/.row-->
-                </div>
-                <!--/.container-->
-            </section>  
+                    
 
+                    <div class="row sortable-container text-left">
 
-
-
-
-           <section class="font-1">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-2 hidden-md-down">
-                       
-                        </div>
-                        <div class="col-12 hidden-lg-up">
-                            <h2 class="mb-5">Dedicated Teams</h2>
-                        </div>
-                        <div class="col-lg-6">
-                            <h5 class="mb-4">&#8212; Story Behind G</h5>
-                            <p class="lead mb-5 color-5">This is G evolved into a tech company as a direct result of good people with genuine intentions.  While the brand may not initially scream world-class international tech company, the consistency of our approach will ensure you never forget it. Technology has evolved to the point where anything you can imagine is possible, if your genuine in your desire to getting it done, you found the team/partners to make it happen. </p>
-
-                            
-                            <h5 class="mb-4">&#8212; Mission &amp; Vision</h5>
-                            <p class="color-5 mb-lg-0 mb-5">The company exists to be genuine in its approach to forging relationships by being accountable and delivering expectations. By understanding competencies, abilities, and experience, the company shall only commit itself to obligations that are in line with its values and strategy. With communication and transparency at the forefront, the mission is to do good business with good people, creating meaningful solutions that move the needle forward for the betterment of all. </p>
+                        <div class="sortable-item col-lg-6 hospitality">
+                            <div class="hoverbox p-3 pt-11 h-100">
+                                <div class="background-holder overlay overlay-gradient" style="background-image:url(assets/images/restaurant-header-01.jpg);"> </div>
+                                <!--/.background-holder-->
+                                <div class="row h-100 hover-box-content-initial align-items-end">
+                                    <div class="col mt-8">
+                                        <h5 class="color-white text-uppercase fw-500 mb-0">Culinary Experiences</h5>
+                                    </div>
+                                </div>
+                                <div class="hoverbox-content row align-items-center color-white text-center">
+                                    <div class="background-holder overlay overlay-0" style="background-image:url(undefined);"> </div>
+                                    <!--/.background-holder-->
+                                    <div class="col-sm-12 p-5">
+                                        <h4 class="mb-2">Showcase Food & Drink</h4>
+                                        <p class="d-inline-block font-1">Menu Management / Real-Time Updates</p>
+                                          </br>
+                                        <a class="btn btn-warning btn-sm" href="restaurant.html">Example</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-4"></div>
                         </div>
 
-                        <div class="col-lg-4 pl-lg-5">
-                            <h5 class="mb-0">&#8212; Founded in</h5>
-                            <div class="fs-5 fw-100 mb-5">2011</div>
-                            <h5 class="mb-3">&#8212; Offices in</h5>
-                            <p class="fs-3 color-7 lh-1 mb-5 fw-300">Toronto &amp; Mumbai</p>
-                            <h5 class="mb-3">&#8212; Services</h5>
-                            <p class="lead color-5">Custom Solutions, Blockchain, Mobile Apps, Web, &amp; Digital Marketing</p>
+
+                         <div class="sortable-item col-lg-6 hospitality">
+                            <div class="hoverbox p-3 pt-11 h-100">
+                                <div class="background-holder overlay overlay-gradient" style="background-image:url(assets/images/arab.jpg);"> </div>
+                                <!--/.background-holder-->
+                                <div class="row h-100 hover-box-content-initial align-items-end">
+                                    <div class="col mt-8">
+                                        <h5 class="color-white text-uppercase fw-500 mb-0">Accomodations</h5>
+                                    </div>
+                                </div>
+                                <div class="hoverbox-content row align-items-center color-white text-center">
+                                    <div class="background-holder overlay overlay-0" style="background-image:url(undefined);"> </div>
+                                    <!--/.background-holder-->
+                                    <div class="col-sm-12 p-5">
+                                        <h4 class="mb-2">Hotels | Resorts | Rentals | Cruise </h4>
+                                        <p class="d-inline-block font-1">Online Booking and Content Delivery</p>
+                                          </br>
+                                        <a class="btn btn-warning btn-sm" href="accomodations.html">Example</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-4"></div>
+                        </div>
+
+
+                        <div class="sortable-item col-lg-6 wellness">
+                            <div class="hoverbox p-3 pt-11 h-100">
+                                <div class="background-holder overlay overlay-gradient" style="background-image:url(assets/images/hospital-banner-02.jpg);"> </div>
+                                <!--/.background-holder-->
+                                <div class="row h-100 hover-box-content-initial align-items-end">
+                                    <div class="col mt-8">
+                                        <h5 class="color-white text-uppercase fw-500 mb-0">Health Care</h5>
+                                    </div>
+                                </div>
+                                <div class="hoverbox-content row align-items-center color-white text-center">
+                                    <div class="background-holder overlay overlay-0" style="background-image:url(undefined);"> </div>
+                                    <!--/.background-holder-->
+                                    <div class="col-sm-12 p-5">
+                                        <h4 class="mb-2">Public | Private | Non Profit</h4>
+                                        <p class="d-inline-block font-1">Showase the Facility, Services with Online Booking</p>
+                                        <a class="btn btn-warning btn-sm" href="health-care.html">Example</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-4"></div>
+                        </div>
+
+
+                        <div class="sortable-item col-lg-6 wellness">
+                            <div class="hoverbox p-3 pt-11 h-100">
+                                <div class="background-holder overlay overlay-gradient" style="background-image:url(assets/images/education-video-header.jpg);"> </div>
+                                <!--/.background-holder-->
+                                <div class="row h-100 hover-box-content-initial align-items-end">
+                                    <div class="col mt-8">
+                                        <h5 class="color-white text-uppercase fw-500 mb-0">Education</h5>
+                                    </div>
+                                </div>
+                                <div class="hoverbox-content row align-items-center color-white text-center">
+                                    <div class="background-holder overlay overlay-0" style="background-image:url(undefined);"> </div>
+                                    <!--/.background-holder-->
+                                    <div class="col-sm-12 p-5">
+                                        <h4 class="mb-2">Public | Private | Specific</h4>
+                                        <p class="d-inline-block font-1">Early Childhood to Post Secondary and Beyond</p>
+                                        </br>
+                                        <a class="btn btn-warning btn-sm" href="education.html">Example</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-4"></div>
+                        </div>
+
+
+                        <div class="sortable-item col-lg-6 products">
+                            <div class="hoverbox p-3 pt-11 h-100">
+                                <div class="background-holder overlay overlay-gradient" style="background-image:url(assets/images/shop/shop-add-1.jpg);"> </div>
+                                <!--/.background-holder-->
+                                <div class="row h-100 hover-box-content-initial align-items-end">
+                                    <div class="col mt-8">
+                                        <h5 class="color-white text-uppercase fw-500 mb-0">E-Commerce</h5>
+                                    </div>
+                                </div>
+                                <div class="hoverbox-content row align-items-center color-white text-center">
+                                    <div class="background-holder overlay overlay-0" style="background-image:url(undefined);"> </div>
+                                    <!--/.background-holder-->
+                                    <div class="col-sm-12 p-5">
+                                        <h4 class="mb-2">Products | Brands | Shopping Cart</h4>
+                                        <p class="d-inline-block font-1">Fuel Additional Sales with a Effective Digital Strategy</p>
+                                        <a class="btn btn-warning btn-sm" href="e-commerce.html">Example</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-4"></div>
+                        </div>
+
                         
+
+                        <div class="sortable-item col-lg-6 hospitality">
+                            <div class="hoverbox p-3 pt-11 h-100">
+                                <div class="background-holder overlay overlay-gradient" style="background-image:url(assets/images/travel-03.jpg);"> </div>
+                                <!--/.background-holder-->
+                                <div class="row h-100 hover-box-content-initial align-items-end">
+                                    <div class="col mt-8">
+                                        <h5 class="color-white text-uppercase fw-500 mb-0">Tourism</h5>
+                                    </div>
+                                </div>
+                                <div class="hoverbox-content row align-items-center color-white text-center">
+                                    <div class="background-holder overlay overlay-0" style="background-image:url(undefined);"> </div>
+                                    <!--/.background-holder-->
+                                    <div class="col-sm-12 p-5">
+                                        <h4 class="mb-2">Tourism Boards | Travel Agency | Regional Discovery</h4>
+                                        <p class="d-inline-block font-1">Ensure your message connects and enhance with a Mobile App</p>
+                                        <a class="btn btn-warning btn-sm" href="tourism.html">Example</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-4"></div>
                         </div>
+                            
+                            
+
+                        
+                    </div>
                     </div>
                     <!--/.row-->
                 </div>
                 <!--/.container-->
             </section>
 
+
+
+       
 
            
 
@@ -404,7 +457,7 @@
             <footer class="background-1 color-8 py-3 fs--1 fw-600 font-heading">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-auto font-1">&copy; 2017 This is G &trade; Inc. </div>
+                        <div class="col-auto font-1">&copy; 2018 This is G Inc. </div>
                         <div class="col fs-0 text-right">
                             <a class="p-2 color-8" href="#">
                                 <i class="fa fa-facebook"></i>
@@ -433,6 +486,8 @@
         <script src="assets/lib/jquery/dist/jquery.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
         <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="assets/lib/semantic-ui-dropdown/dropdown.js"></script>
+        <script src="assets/lib/semantic-ui-transition/transition.js"></script>
         <script src="assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
         <script src="assets/lib/rellax/rellax.js"></script>
         <script src="assets/lib/typed.js/dist/typed.min.js"></script>
